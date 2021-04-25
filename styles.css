@@ -64,7 +64,7 @@
   }
   .image-logo{
       width: 415px;
-      height: 300px;
+      height: 250px;
   }
   @media (min-width: 768px) {
     .flex-md-equal > * {
