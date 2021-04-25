@@ -62,6 +62,10 @@
   .flex-equal > * {
     flex: 1;
   }
+  .image-logo{
+      width: 415px;
+      height: 300px;
+  }
   @media (min-width: 768px) {
     .flex-md-equal > * {
       flex: 1;
