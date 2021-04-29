@@ -1,7 +1,14 @@
 import styles from '../../styles/Home.module.css'
 import animate from '../../styles/Animation.module.css'
+import {useEffect} from 'react'
+import PriceWidget from '../components/price'
 
 export default function Home() {
+    
+    useEffect(()=>{
+    
+    },[])
+    
     return (
         <div className={styles.homepage_content_wrapper}>
             <div className={styles.body_section}>
@@ -12,12 +19,14 @@ export default function Home() {
                     <button className={styles.button1}>Button Press</button>
                 </div>
                 <div className={styles.content_right_pane}>
-                    <img
+                    {/* <img
                         className={styles.image_content}
                         src="./img/logo.jpg"
                         alt="original logo"
-                    />
+                    /> */}
+                    <PriceWidget/>
                 </div>
+
             </div>
         </div>
     )

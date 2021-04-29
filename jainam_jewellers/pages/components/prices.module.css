@@ -1,0 +1,44 @@
+.main_wrapper {
+    background: #fff;
+    display: flex;
+    border-radius: 3%;
+    box-shadow: 5px 5px 8px #000;
+}
+
+.content_box {
+    margin: 5px;
+}
+
+.price_value {
+    color: #000;
+}
+
+.price_label {
+    color: #000;
+}
+
+.p_increase {
+    animation: increase 10s infinite ;
+}
+
+.p_decrease {
+    animation: decrease 10s infinite;
+}
+
+@keyframes decrease {
+    from {
+        color: red;
+    }
+    to {
+        color: black;
+    }
+}
+
+@keyframes increase {
+    from {
+        color: green;
+    }
+    to {
+        color: black;
+    }
+}
