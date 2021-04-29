@@ -1,0 +1,48 @@
+{
+    "market": {
+        "pitches": [
+            {
+                "securityClassNarrative": "GOLD",
+                "securityId": "AUXZU",
+                "considerationCurrency": "USD",
+                "buyPrices": [
+                    {
+                        "actionIndicator": {
+                            "value": "B",
+                            "sell": false,
+                            "buy": true
+                        },
+                        "quantity": 0.557,
+                        "limit": 56830,
+                        "ouncesQuantity": 17.91,
+                        "sell": false,
+                        "ouncesLimit": 1767.61,
+                        "buy": true,
+                        "value": 31654.310
+                    }
+                ],
+                "sellPrices": [
+                    {
+                        "actionIndicator": {
+                            "value": "S",
+                            "sell": true,
+                            "buy": false
+                        },
+                        "quantity": 0.124,
+                        "limit": 56907,
+                        "ouncesQuantity": 3.99,
+                        "sell": true,
+                        "ouncesLimit": 1770.01,
+                        "buy": false,
+                        "value": 7056.468
+                    }
+                ],
+                "size": 2
+            }
+        ]
+    },
+    "updateTimeString": "29 Apr 2021 22:59:40 IST",
+    "loggedIn": false,
+    "locale": "en",
+    "weightUnit": "KG"
+}

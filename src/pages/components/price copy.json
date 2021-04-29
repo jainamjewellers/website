@@ -1,0 +1,29 @@
+{
+    "ts": 1619724084573,
+    "tsj": 1619724075879,
+    "date": "Apr 29th 2021, 03:21:15 pm NY",
+    "items": [
+        {
+            "curr": "INR",
+            "xauPrice": 131428.6551,
+            "xagPrice": 1934.5538,
+            "chgXau": -669.983,
+            "chgXag": -6.3759,
+            "pcXau": -0.5072,
+            "pcXag": -0.3285,
+            "xauClose": 132098.63805,
+            "xagClose": 1940.92972
+        },
+        {
+            "curr": "USD",
+            "xauPrice": 1773.4375,
+            "xagPrice": 26.104,
+            "chgXau": -2.6075,
+            "chgXag": -0.1495,
+            "pcXau": -0.1468,
+            "pcXag": -0.5694,
+            "xauClose": 1776.045,
+            "xagClose": 26.2535
+        }
+    ]
+}
