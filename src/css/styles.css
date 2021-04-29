@@ -1,3 +1,12 @@
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+div {
+    font-family: Montserrat;
+}
+
 .main_page_wrapper {
     background-image: url('./../img/rene-bohmer-YeUVDKZWSZ4-unsplash.jpg');
     height: 100vh;
@@ -19,7 +28,7 @@
     margin: auto;
     background-color: #00000000!important;
     color: #fff;
-    border-bottom: 2px solid #fb9902;
+    border-bottom: 2px solid #ffe500;
 }
 
 .nav-link {
@@ -28,9 +37,103 @@
 }
 
 .nav-link:hover {
-    color: #fb9902;
+    color: #ffe500;
 }
 
 .jainam_logo {
-    width: 200px
+    width: 12rem
+}
+
+.banner_content {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.banner_content .heading {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 72px;
+    color: #ffe500;
+}
+
+.banner_content .sub-heading {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.body_section {
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+.image_content {
+    width: 100%;
+}
+
+.content_right_pane {
+    align-content: center;
+    margin: auto
+}
+
+/* Animations */
+
+.fade-in-2sec {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px)
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px)
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px)
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px)
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px)
+    }
+    100% {
+        opacity: 1;
+    }
 }
