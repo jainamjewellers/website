@@ -1,0 +1,76 @@
+.main_wrapper {
+    background: #111724;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 3%;
+    box-shadow: 0px 0px 19px #c58c00bf;
+    justify-content: center;
+    width: 22rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.price_content_box {
+    margin: 5px;
+    margin-right: 3rem;
+    margin-bottom: 1rem;
+}
+
+.delta_content_box {
+    margin: 5px;
+}
+
+.current_price_value{
+    color: rgb(255, 255, 255)!important;
+    background: #000000;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+.delta_price_value {
+    color: rgb(255, 255, 255)!important;
+    background: #000000;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.price_label {
+    color: #a0a0a0!important;
+}
+
+.p_increase {
+    color: green!important;
+    /* animation: increase 20s infinite; */
+}
+
+.p_decrease {
+    color: red!important;
+    /* animation: decrease 20s infinite; */
+}
+
+.last_updated{
+    color: white;
+    display: inline;
+    font-size: 0.75rem;
+}
+
+@keyframes decrease {
+    from {
+        color: red!important;
+    }
+    to {
+        color: rgb(255, 255, 255)!important;
+    }
+}
+
+@keyframes increase {
+    from {
+        color: green!important;
+    }
+    to {
+        color: rgb(255, 255, 255)!important;
+    }
+}

@@ -1,7 +1,7 @@
 import styles from '../../styles/Home.module.css'
 import animate from '../../styles/Animation.module.css'
 import {useEffect} from 'react'
-import PriceWidget from '../components/price'
+import PriceWidget from '../components/price/price'
 
 export default function Home() {
     
@@ -19,11 +19,6 @@ export default function Home() {
                     <button className={styles.button1}>Button Press</button>
                 </div>
                 <div className={styles.content_right_pane}>
-                    {/* <img
-                        className={styles.image_content}
-                        src="./img/logo.jpg"
-                        alt="original logo"
-                    /> */}
                     <PriceWidget/>
                 </div>
 

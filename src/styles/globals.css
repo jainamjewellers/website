@@ -28,4 +28,10 @@ div {
 button{
   cursor: pointer;
 }
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
 @import url("./Animation.css");

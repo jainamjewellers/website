@@ -5,6 +5,7 @@ export async function getPrice() {
         let requestOptions = {
             method: 'get',
             url: '/api/price',
+            timeout: 1000
         }
         let result = await axios(requestOptions);
         //console.log("result.data",result.data)
@@ -19,6 +20,7 @@ export async function getPrice2() {
         let requestOptions = {
             method: 'get',
             url: '/api/price2',
+            timeout: 4000
         }
         let result = await axios(requestOptions);
         //console.log("result.data",result.data)
