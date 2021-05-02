@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getPrice, getPrice2 } from '../../../actions/common'
+import { getPrice, getPrice2,getPriceDirect } from '../../../actions/common'
 import styles from './prices.module.css'
 import moment from "moment";
 export default function PriceWidget() {
@@ -30,7 +30,7 @@ export default function PriceWidget() {
 	}, [])
 	async function fetchData() {
 		//let result = await getPrice()
-		let result = await getPrice2()
+		let result = await getPriceDirect()
 		//console.log("result",result)
 		if(date!=result.date){
 			setDate(moment(result.tsj).format('dddd, MMMM Do, YYYY h:mm:ss A'))
