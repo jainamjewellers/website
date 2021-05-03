@@ -1,0 +1,12 @@
+.wrapper {
+    background-size: cover;
+    height: 24rem;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.content{
+    background: #ffffff;
+    position: relative;
+    top: 16rem
+}

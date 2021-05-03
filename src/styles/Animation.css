@@ -1,13 +1,26 @@
 /* Animations */
 
-.fade {
-    animation: fadeIn var("--s");
-    -webkit-animation: fadeIn var("--s");
-    -moz-animation: fadeIn var("--s");
-    -o-animation: fadeIn var("--s");
-    -ms-animation: fadeIn var("--s");
+.fade-2s {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
   }
-  
+  .fade-5s {
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+  }
+  .fade-10s {
+    animation: fadeIn 10s;
+    -webkit-animation: fadeIn 10s;
+    -moz-animation: fadeIn 10s;
+    -o-animation: fadeIn 10s;
+    -ms-animation: fadeIn 10s;
+  }
   @keyframes fadeIn {
     0% {
         opacity: 0;
