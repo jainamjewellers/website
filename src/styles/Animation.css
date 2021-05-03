@@ -1,11 +1,11 @@
 /* Animations */
 
-.fade-in-2sec {
-    animation: fadeIn 2s;
-    -webkit-animation: fadeIn 2s;
-    -moz-animation: fadeIn 2s;
-    -o-animation: fadeIn 2s;
-    -ms-animation: fadeIn 2s;
+.fade {
+    animation: fadeIn var("--s");
+    -webkit-animation: fadeIn var("--s");
+    -moz-animation: fadeIn var("--s");
+    -o-animation: fadeIn var("--s");
+    -ms-animation: fadeIn var("--s");
   }
   
   @keyframes fadeIn {

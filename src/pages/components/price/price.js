@@ -36,7 +36,7 @@ export default function PriceWidget() {
 			setDate(moment(result.tsj).format('dddd, MMMM Do, YYYY h:mm:ss A'))
 			var price_10gm = parseInt(localStorage.getItem("price"));
 			let before_gst = 10 * (result.items[0].xauPrice) / troy_ounce
-			let price_per_10gm = before_gst + (before_gst*0.13)
+			let price_per_10gm = before_gst + (before_gst*0.1075)
 			let delta = price_10gm-price_per_10gm
 			//console.log(price_10gm,price_per_10gm,delta,"price_tengm,price_per_10gm,delta")
 			localStorage.setItem("price",price_per_10gm);
