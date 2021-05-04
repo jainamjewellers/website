@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export async function getCarouselImages() {
-    const url = `http://localhost:5000/api/carousel`
+    const url = `https://portal.jainamjewellers.in/api/carousel`
     try {
         let requestOptions = {
             method: 'get',
