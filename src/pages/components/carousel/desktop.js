@@ -84,8 +84,8 @@ export default function Desktop(props) {
                     <div key={index}>
                         {console.log(element)}
                     <WithStyles
-                        description="Appending currency sign to a purchase form in your e-commerce site using plain JavaScript."
-                        headline="w3js.com - web front-end studio"
+                        description={element.description}
+                        headline={element.title}
                         image={`https://portal.jainamjewellers.in/carousel/${element.img}`}
                     /></div>
                 )
