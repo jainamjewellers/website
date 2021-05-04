@@ -79,7 +79,7 @@ export default function Desktop(props) {
             slidesToSlide={1}
             swipeable
         >
-            {images.map((element, index) => {
+            {images && images.length>0 && images.map((element, index) => {
                 return (
                     <div key={index}>
                         {console.log(element)}
