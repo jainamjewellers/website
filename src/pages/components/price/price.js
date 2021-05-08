@@ -29,8 +29,8 @@ export default function PriceWidget() {
 		setInterval(fetchData, 5000);
 	}, [])
 	async function fetchData() {
-		//let result = await getPrice()
-		let result = await getPriceDirect()
+		let result = await getPrice2()
+		//let result = await getPriceDirect()
 		//console.log("result",result)
 		if(date!=result.date){
 			setDate(moment(result.tsj).format('dddd, MMMM Do, YYYY h:mm:ss A'))

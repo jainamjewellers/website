@@ -3,6 +3,7 @@ import animate from '../../styles/Animation.module.css'
 import {useEffect} from 'react'
 import PriceWidget from '../components/price/price'
 import Carousel from '../components/carousel/desktop'
+
 export default function Home() {
     
     useEffect(()=>{
@@ -19,7 +20,7 @@ export default function Home() {
                     <button className={styles.button1}>View now</button>
                 </div>
                 <div className={styles.content_right_pane}>
-                    <PriceWidget/>
+                    
                 </div>
 
             </div>
