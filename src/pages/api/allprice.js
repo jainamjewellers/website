@@ -11,7 +11,7 @@ const handler = async (req, res) => {
 
 async function apiCall(req) {
     try {
-        //console.log(req.query)
+        console.log(req.query)
         const browser = await puppeteer.launch();
         const page = await browser.newPage();
         await page.goto('http://www.spngold.in/');
@@ -28,7 +28,7 @@ async function apiCall(req) {
             options.map((option) => option.textContent)
         );
         //#symbol_412 > div.content > div.sell.label
-        //console.log(options);
+        console.log(options);
         await browser.close();
         return options[0]
     } catch (error) {
