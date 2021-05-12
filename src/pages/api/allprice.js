@@ -11,7 +11,7 @@ const handler = async (req, res) => {
 
 async function apiCall(req) {
     try {
-        console.log(req.query)
+        //console.log(req.query)
         const browser = await puppeteer.launch({
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
             ignoreHTTPSErrors: true,
@@ -27,13 +27,13 @@ async function apiCall(req) {
         if (req.query.type == '999') {
             selector = '#symbol_412 > div.content > div.sell.label'
         }
-        console.log("selector: ", selector)
+        //console.log("selector: ", selector)
         const options = await page.$$eval(selector, (options) =>
             options.map((option) => option.textContent)
         );
-        console.log(page)
+        //console.log(page)
         //#symbol_412 > div.content > div.sell.label
-        console.log(options);
+        //console.log(options);
         await browser.close();
         return options[0]
     } catch (error) {
