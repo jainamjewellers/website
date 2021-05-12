@@ -33,6 +33,7 @@ async function apiCall(req) {
         await browser.close();
         return options[0]
     } catch (error) {
+        console.log(error)
         return error
     }
 }
