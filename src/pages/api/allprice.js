@@ -23,10 +23,11 @@ async function apiCall(req) {
         if (req.query.type == '999') {
             selector = '#symbol_412 > div.content > div.sell.label'
         }
-        //console.log("995 price", selector)
+        console.log("selector: ", selector)
         const options = await page.$$eval(selector, (options) =>
             options.map((option) => option.textContent)
         );
+        console.log(page)
         //#symbol_412 > div.content > div.sell.label
         console.log(options);
         await browser.close();

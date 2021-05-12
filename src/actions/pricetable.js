@@ -22,7 +22,7 @@ export async function getBasePrice(arg) {
         let requestOptions = {
             method: 'get',
             url: `/api/allprice?type=${arg}`,
-            timeout: 4000
+            timeout: 10000
         }
         let result = await axios(requestOptions);
         //console.log("result.data",result.data)
