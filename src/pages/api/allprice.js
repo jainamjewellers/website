@@ -12,7 +12,11 @@ const handler = async (req, res) => {
 async function apiCall(req) {
     try {
         console.log(req.query)
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+            ignoreHTTPSErrors: true,
+            dumpio: false
+          });
         const page = await browser.newPage();
         await page.goto('http://www.spngold.in/');
 
