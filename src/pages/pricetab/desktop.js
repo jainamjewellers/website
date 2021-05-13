@@ -1,11 +1,11 @@
 import PriceWidget from '../components/price/price'
 import { useState, useEffect } from 'react'
 import { getBasePrice, getPortalPrices } from '../../actions/pricetable'
+import styles from './desktop.module.css'
 import _ from "lodash";
 
 export default function PriceTab(props) {
-    const [base995, set995] = useState(1)
-    const [base999, set999] = useState(1)
+   
     const [labour, setLab] = useState(1)
     const [priceObj, setPriceObj] = useState([{}])
     const fetchData = async () => {
@@ -44,24 +44,50 @@ export default function PriceTab(props) {
     useEffect(() => {
         fetchData()
     }, [])
+    const ButtonGroup = () => {
+        const [showButtonGroup, showButton] = useState(false)
+        const [quantity, setQuantity] = useState(0)
+        return(
+            
+            <div className={styles.button_group}>
+                {
+                    (quantity>=1) ?
+                    <div className="button">
+                        <button onClick={()=>{setQuantity(quantity-1)}} className={styles.button_minus}>-</button>
+                        <button className={styles.quantity}>{quantity}</button>
+                        <button onClick={()=>{(quantity<5)&&setQuantity(quantity+1)}} className={styles.button_plus}>+</button>
+                    </div>
+                    :
+                    <button className={styles.add_button} onClick={()=>{showButton(true);setQuantity(quantity+1)}}>
+                        {`Add`}
+                    </button>
+
+                }
+            </div>
+        )
+    }
     return (
         <div>
             {/* <PriceWidget /> */}
             <table style={{ backgroundColor: "white" }}>
                 <thead>
                     <tr>
+                        <th> </th>
                         <th>99.50%</th>
                         <th>Gold Coin Price</th>
                         <th>99.90%</th>
+                        <th> </th>
                     </tr>
                 </thead>
                 <tbody>
                     {priceObj && priceObj.length > 0 && priceObj.map((e, i) => {
                         return (
                             <tr>
+                                <td><ButtonGroup/></td>
                                 <td>{e.val2}</td>
                                 <td>{e.label}</td>
                                 <td>{e.val1}</td>
+                                <td><ButtonGroup/></td>
                             </tr>
                         )
                     })

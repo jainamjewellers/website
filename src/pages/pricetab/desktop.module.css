@@ -1,0 +1,26 @@
+.button_group{
+    width: 200px;
+    background-color: white;
+}
+
+.button_minus {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.button_plus {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.quantity {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.add_button{
+    width: 90px;
+    height: 30px;
+}
