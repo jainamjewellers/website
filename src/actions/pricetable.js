@@ -21,7 +21,7 @@ export async function getBasePrice(arg) {
     try {
         let requestOptions = {
             method: 'get',
-            url: `/api/allprice?type=${arg}`,
+            url: `https://portal.jainamjewellers.in/api/baseprice?type=${arg}`,
             timeout: 10000
         }
         let result = await axios(requestOptions);
