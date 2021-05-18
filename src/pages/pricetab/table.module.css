@@ -1,0 +1,29 @@
+.main_table_wrapper{
+    width: 30rem;
+}
+.table_row{
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 30px;
+    height: 50px;
+}
+
+.table_head{
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 30px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.table_row div, .table_head div{
+    width: 10rem;
+    text-align: center;
+}
+
+.table_line{
+    background: linear-gradient(to right, #000000, #ffffff, #000000);;
+    height: 1px;
+    position: relative;
+    top: -11px;
+}

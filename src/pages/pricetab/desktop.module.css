@@ -1,26 +1,64 @@
-.button_group{
-    width: 200px;
-    background-color: white;
+.main_wrapper {
+    margin: auto;
+    width: fit-content;
+}
+
+.table_wrapper {
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    background: #191919;
+    width: fit-content;
+    padding: 30px 30px 30px 30px;
+    border-radius: 4px;
+    box-shadow: 0 0px 2.2px rgba(0, 0, 0, 0.281), 0 0px 5.3px rgba(0, 0, 0, 0.404), 0 0px 10px rgba(0, 0, 0, 0.5), 0 0px 17.9px rgba(0, 0, 0, 0.596), 0 0px 33.4px rgba(0, 0, 0, 0.719), 0 0px 80px rgba(0, 0, 0, 1)
+}
+
+.button_group {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: none;
+    text-align: center;
+    box-shadow: 0 0.3px 2.2px rgba(0, 0, 0, 0.022), 0 0.7px 5.3px rgba(0, 0, 0, 0.032), 0 1.3px 10px rgba(0, 0, 0, 0.04), 0 2.2px 17.9px rgba(0, 0, 0, 0.048), 0 4.2px 33.4px rgba(0, 0, 0, 0.058), 0 10px 80px rgba(0, 0, 0, 0.08);
 }
 
 .button_minus {
+    background: #191919;
+    color: #fff;
     width: 30px;
     height: 30px;
     text-align: center;
+    border: 1px solid #fff;
+    border-radius: 3px;
 }
+
 .button_plus {
+    background: #191919;
+    color: #fff;
     width: 30px;
     height: 30px;
     text-align: center;
+    border: 1px solid #fff;
+    border-radius: 3px;
 }
 
 .quantity {
+    background: #191919;
+    color: #fff;
     width: 30px;
     height: 30px;
     text-align: center;
+    border: 1px solid #fff;
+    border-radius: 3px;
 }
 
-.add_button{
+.add_button {
+    /* box-shadow: 0 0.3px 2.2px rgba(0, 0, 0, 0.022), 0 0.7px 5.3px rgba(0, 0, 0, 0.032), 0 1.3px 10px rgba(0, 0, 0, 0.04), 0 2.2px 17.9px rgba(0, 0, 0, 0.048), 0 4.2px 33.4px rgba(0, 0, 0, 0.058), 0 10px 80px rgba(0, 0, 0, 0.08);
+     */
     width: 90px;
     height: 30px;
+    color: #ffffff;
+    background: rgb(0, 0, 0);
+    border: 1px solid #fff;
+    border-radius: 3px;
 }
