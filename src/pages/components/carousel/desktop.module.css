@@ -1,12 +1,20 @@
 .wrapper {
     background-size: cover;
     height: 24rem;
-    padding: 2rem;
+    padding: 0 2rem;
     margin: 1rem;
+    box-shadow:
+  0 0px 5.3px rgba(0, 0, 0, 0.564),
+  0 0px 17.9px rgba(0, 0, 0, 0.662),
+  0 0px 80px rgba(0, 0, 0, 1);
+    
 }
 
 .content{
-    background: #ffffff;
+    background: #000000bd;
+    padding: 0.5rem;
+    color: #fff;
     position: relative;
-    top: 16rem
+    top: 18rem;
+    border-radius: 5px
 }

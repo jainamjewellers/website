@@ -1,9 +1,10 @@
 html, body {
   padding: 0;
   margin: 0;
-  background-image: url('../public/img/rene-bohmer-YeUVDKZWSZ4-unsplash.jpg');
+  background-image: url('/img/rene-bohmer-YeUVDKZWSZ4-unsplash.jpg'),url('/img/rene-bohmer-YeUVDKZWSZ4-unsplash_180.jpg');
   height: 100vh;
-  background-repeat: no-repeat;
+  background-position: left top , left bottom;
+  background-repeat: no-repeat, repeat;
   background-size: 100%;
 }
 

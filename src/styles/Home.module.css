@@ -10,16 +10,17 @@
 }
 
 .banner_content {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  margin: auto;
+  padding: 5rem;
+  margin: 5rem 0 5rem 0;
+  border-radius: 5px;
+  background: #0000005e;
 }
 
 .content_heading {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 3rem;
-  color: #FFD700;
+  color: #ffdd00;
 }
 
 .sub_heading {
@@ -33,7 +34,7 @@
   font-size: 1rem;
   padding: 5px 10px;
   color: #2b2b2b;
-  background: #FFD700;
+  background: #ffdd00;
   border: none;
   border-radius: 5%;
 }
