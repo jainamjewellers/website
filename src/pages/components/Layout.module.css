@@ -1,8 +1,8 @@
 .main_header_wrapper {
- /* background: rgb(25 25 25 / 70%); */
- background: rgb(25 25 25 / 70%);
- padding-top: 1rem ;
- padding-bottom: 0.5rem ;
+  /* background: rgb(25 25 25 / 70%); */
+  background: rgb(25 25 25 / 70%);
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .top_elements {
@@ -21,18 +21,18 @@
   border-bottom: 2px solid #ffe500;
 }
 
-.navbar_link_group{
-  margin-left:auto ;
+.navbar_link_group {
+  margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.navbar_link{
+.navbar_link {
   padding: 1rem;
 }
 
-.navbar_link_label{
+.navbar_link_label {
   color: #fff;
   text-transform: uppercase;
 }
@@ -42,11 +42,44 @@
 }
 
 .jainam_logo {
-  height:5rem;
+  height: 5rem;
 }
-.footer_main_wrap {
-  margin: 0;
-  color: #000;
-  background: rgb(25 25 25 / 70%);
 
+.footer_main_wrap {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  color: #fff;
+  background: #000;
+  text-align: center;
+}
+
+.footer_link_wrapper {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: auto;
+}
+
+.socials_wrapper {
+  margin-left: auto;
+}
+
+.socials_element {
+  background: #fff;
+  border-radius: 50%;
+  padding: 0.25rem;
+  height: 3rem;
+  width: 3rem;
+}
+.socials_element img{
+  height: 2rem;
+  width: 2rem;
+}
+
+.footer_link_element {
+  margin: 0.3rem 1rem 0 1rem
 }

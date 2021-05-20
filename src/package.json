@@ -17,6 +17,7 @@
     "postman-request": "^2.88.1-postman.30",
     "puppeteer": "^9.1.1",
     "react": "17.0.2",
+    "react-device-detect": "^1.17.0",
     "react-dom": "17.0.2",
     "react-multi-carousel": "^2.6.2"
   }
