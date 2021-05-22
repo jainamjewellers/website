@@ -16,14 +16,15 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  align-items: center;
+  text-align: center;
 }
 
 .navbar {
   display: flex;
   width: 70%;
   margin: auto;
-  background-color: #00000000!important;
+  background-color: #00000000;
   color: #fff;
   border-bottom: 2px solid #ffdd0090;
 }
@@ -77,18 +78,21 @@
 
 .socials_wrapper {
   margin-left: auto;
+  display: flex;
 }
 
 .socials_element {
   background: #fff;
   border-radius: 50%;
   padding: 0.25rem;
-  height: fit-content;
-  width: fit-content;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  height: 3rem;
+  width: 3rem;
 }
 
 .socials_element:hover {
-  box-shadow: 0 0px 9.2px rgba(255, 255, 255, 0.573), 0 0px 32px rgb(255, 255, 255);
+  box-shadow: 0 0px 5px rgba(255, 255, 255, 0.573), 0 0px 15px rgb(255, 255, 255);
 }
 
 .socials_element img {

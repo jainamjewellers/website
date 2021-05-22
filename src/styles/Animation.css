@@ -1,4 +1,11 @@
 /* Animations */
+.dropIn {
+  animation: dropIn 1s;
+  -webkit-animation: dropIn 1s;
+  -moz-animation: dropIn 1s;
+  -o-animation: dropIn 1s;
+  -ms-animation: dropIn 1s;
+}
 
 .fade-2s {
   animation: fadeIn 2s;
@@ -104,6 +111,58 @@
   0% {
     opacity: 0;
     transform: translateY(10px)
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* edfsdfsddfsdf */
+
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px)
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px)
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px)
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px)
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px)
   }
   100% {
     opacity: 1;

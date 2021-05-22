@@ -1,7 +1,26 @@
 import Head from 'next/head'
+import { useState, useEffect } from 'react'
 import styles from './Layout.module.css'
 export default function Layout(props) {
     const { children } = props
+    const [scrolled, setScrolled] = useState(false);
+    const handleScroll = () => {
+        const offset = window.scrollY;
+        console.log(offset)
+        if (offset > 100) {
+            setScrolled(true);
+        }
+        else {
+            setScrolled(false);
+        }
+    }
+    let navbarClasses = ['navbar'];
+    if (scrolled) {
+        navbarClasses.push('scrolled dropIn');
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+    })
     return (
         <div className={styles.layout_wrapper}>
             <Head>
@@ -11,8 +30,8 @@ export default function Layout(props) {
                 <meta name="description" content="Wholesale jewellery store that offers a variety of custom designs made to order."></meta>
             </Head>
             <div className={styles.main_header_wrapper}>
-                <div className={styles.top_elements}>
-                    <nav className={styles.navbar}>
+                <div className={`${navbarClasses.join(" ")} ${styles.top_elements}`}>
+                    <nav className={`${styles.navbar} navbar`}>
                         <a className={""} href="/">
                             <img src="./img/logo.png" className={styles.jainam_logo} alt="..." />
                         </a>
@@ -45,27 +64,48 @@ export default function Layout(props) {
                 <div className={styles.footer_link_wrapper}>
                     <div>
                         <div className={styles.footer_link_element}>LINK 11</div>
-                        <div className={styles.footer_link_element}>LINK 12</div>
-                        <div className={styles.footer_link_element}>LINK 13</div>
-                        <div className={styles.footer_link_element}>LINK 14</div>
                     </div>
                     <div>
-                        <div className={styles.footer_link_element}>LINK 11</div>
                         <div className={styles.footer_link_element}>LINK 12</div>
-                        <div className={styles.footer_link_element}>LINK 13</div>
-                        <div className={styles.footer_link_element}>LINK 14</div>
                     </div>
                     <div>
-                        <div className={styles.footer_link_element}>LINK 11</div>
-                        <div className={styles.footer_link_element}>LINK 12</div>
                         <div className={styles.footer_link_element}>LINK 13</div>
-                        <div className={styles.footer_link_element}>LINK 14</div>
                     </div>
                     <div className={styles.socials_wrapper}>
-                        <div className={styles.socials_element}>
+                        <div onClick={()=>window.open("https://api.whatsapp.com/send/?phone=917045180822&text")} className={styles.socials_element}>
                             <img
-                            src="/img/twitter_black.png"
-                            alt="Twitter Logo"
+                                src="/img/whatsapp_black.png"
+                                alt="WhatsApp Logo"
+                            />
+                        </div>
+                        <div onClick={()=>window.open("https://www.facebook.com/jainamjewellersmumbai")} className={styles.socials_element}>
+                            <img
+                                src="/img/facebook_black.png"
+                                alt="Facebook Logo"
+                            />
+                        </div>
+                        <div onClick={()=>window.open("https://www.indiamart.com/jainam-jewellers-mumbai")} className={styles.socials_element}>
+                            <img
+                                src="/img/indiamartlogo_black.png"
+                                alt="IndiaMart Logo"
+                            />
+                        </div>
+                        <div onClick={()=>window.open("https://www.instagram.com/jainamjewellersmumbai")} className={styles.socials_element}>
+                            <img
+                                src="/img/instagram_black.png"
+                                alt="Instagram Logo"
+                            />
+                        </div>
+                        <div onClick={()=>window.open("https://www.linkedin.com/company/jainam-jewellers")} className={styles.socials_element}>
+                            <img
+                                src="/img/linkedin_black.png"
+                                alt="LinkedIn Logo"
+                            />
+                        </div>
+                        <div onClick={()=>window.open("https://twitter.com/jainamjewelers")} className={styles.socials_element}>
+                            <img
+                                src="/img/twitter_black.png"
+                                alt="Twitter Logo"
                             />
                         </div>
                     </div>
