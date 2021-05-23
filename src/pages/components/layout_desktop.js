@@ -7,7 +7,7 @@ export default function Layout(props) {
     const handleScroll = () => {
         const offset = window.scrollY;
         //console.log(offset)
-        if (offset > 100) {
+        if (offset > 50) {
             setScrolled(true);
         }
         else {
