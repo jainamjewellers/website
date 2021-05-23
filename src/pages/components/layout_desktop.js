@@ -6,7 +6,7 @@ export default function Layout(props) {
     const [scrolled, setScrolled] = useState(false);
     const handleScroll = () => {
         const offset = window.scrollY;
-        console.log(offset)
+        //console.log(offset)
         if (offset > 100) {
             setScrolled(true);
         }
@@ -20,7 +20,7 @@ export default function Layout(props) {
     }
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
-    })
+    },[])
     return (
         <div className={styles.layout_wrapper}>
             <Head>
@@ -40,19 +40,19 @@ export default function Layout(props) {
                                 <a className={styles.navbar_link_label} href="/">Home</a>
                             </div>
                             <div className={styles.navbar_link}>
-                                <a className={styles.navbar_link_label} href="#">About</a>
+                                <a className={styles.navbar_link_label} href="/about">About</a>
                             </div>
                             <div className={styles.navbar_link}>
-                                <a className={styles.navbar_link_label} href="#">Catalogue</a>
+                                <a className={styles.navbar_link_label} href="/catalogue">Catalogue</a>
                             </div>
                             <div className={styles.navbar_link}>
                                 <a className={styles.navbar_link_label} href="/pricetab">Live Prices</a>
                             </div>
                             <div className={styles.navbar_link}>
-                                <a className={styles.navbar_link_label} href="#">Blog</a>
+                                <a className={styles.navbar_link_label} href="/blog">Blog</a>
                             </div>
                             <div className={styles.navbar_link}>
-                                <a className={styles.navbar_link_label} href="#">Contact</a>
+                                <a className={styles.navbar_link_label} href="/contact">Contact</a>
                             </div>
                         </div>
                     </nav>

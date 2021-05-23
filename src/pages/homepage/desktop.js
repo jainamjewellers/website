@@ -1,4 +1,4 @@
-import styles from '../../styles/Home.module.css'
+import styles from './Home.module.css'
 import animate from '../../styles/Animation.module.css'
 import {useEffect} from 'react'
 import PriceWidget from '../components/price/price'

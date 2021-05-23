@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "google-map-react": "^2.1.9",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "next": "10.2.0",

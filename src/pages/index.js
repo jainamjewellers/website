@@ -5,6 +5,7 @@ import isMobile from 'react-device-detect'
 export default function Index() {
   return (
     <Layout>
+      <div className="black_bg"></div>
       {isMobile?
       <HomeMobile>
 
