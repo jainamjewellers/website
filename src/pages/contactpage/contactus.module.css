@@ -59,8 +59,13 @@
 
 .info_section_element{
     margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    background: #00000093;
 }
-
+.info_section_element:hover{
+    cursor: pointer;
+}
 
 .submit_button{
     background: #000;
@@ -70,4 +75,21 @@
     border: 1px solid #fff;
     padding: 0.25rem 2rem;
     margin: 1rem 0;
+}
+
+.link_image{
+    margin-left: 3rem;
+    width: 3rem;
+    height: 3rem;
+}
+.link_image_svg{
+    padding: 0.7rem 0.5rem;
+}
+
+.facebook{
+    padding: 0.5rem 0.5rem;
+}
+
+.link_text{
+    line-height: 3rem;
 }

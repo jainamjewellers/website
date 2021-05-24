@@ -86,28 +86,38 @@ export default function Contact(props) {
                         </form>
                     </div>
                     <div className={styles.info_section}>
-                        <div className={styles.info_section_heading}>FAQ</div>
-                        <div className={styles.info_section_element}>
+                        <div className={styles.info_section_heading}>LINKS</div>
+                        <div onClick={()=>window.open("https://api.whatsapp.com/send/?phone=917045180822&text")} className={styles.info_section_element}>
+                            <span><img className={styles.link_image} src="/img/whatsapp.svg"/></span>
+                            <span className={styles.link_text}>{`Text on WhatsApp`}</span>
+                        </div>
+                        <div onClick={()=>window.open("https://www.indiamart.com/jainam-jewellers-mumbai")} className={styles.info_section_element}>
+                            <span><img className={`${styles.link_image} ${styles.link_image_svg}`} src="/img/indiamartlogo.png"/></span>
+                            <span className={styles.link_text}>{`Find us on Indiamart`}</span>
+                        </div>
+                        <div onClick={()=>window.open("https://www.facebook.com/jainamjewellersmumbai")} className={styles.info_section_element}>
+                            <span><img className={`${styles.link_image} ${styles.facebook}`} src="/img/facebook.png"/></span>
+                            <span className={styles.link_text}>{`Facebook Page`}</span>
+                        </div>
+                        <div onClick={()=>window.open("https://www.instagram.com/jainamjewellersmumbai")} className={styles.info_section_element}>
+                            <span><img className={`${styles.link_image} ${styles.facebook}`} src="/img/instagram.png"/></span>
+                            <span className={styles.link_text}>{`Like on instagram`}</span>
+                        </div>
+                        <div onClick={()=>window.open("https://www.linkedin.com/company/jainam-jewellers")} className={styles.info_section_element}>
+                            <span><img className={`${styles.link_image} ${styles.facebook}`} src="/img/linkedin.png"/></span>
+                            <span className={styles.link_text}>{`Follow us on LinkedIn`}</span>
+                        </div>
+                        <div onClick={()=>window.open("https://twitter.com/jainamjewelers")} className={styles.info_section_element}>
+                            <span><img className={`${styles.link_image} ${styles.link_image_svg}`} src="/img/twitter.png"/></span>
+                            <span className={styles.link_text}>{`Send a Tweet!`}</span>
+                        </div>
+                        {/* <div className={styles.info_section_element}>
                             <Accordion
                             title={`HOW TO BUY?`}
                             >
                                 {"GIVE ME MONEY"}
                             </Accordion>
-                        </div>
-                        <div className={styles.info_section_element}>
-                            <Accordion
-                            title={`HOW MUCH MONEY?`}
-                            >
-                                {"A SHITLOAD O' DOUGH"}
-                            </Accordion>
-                        </div>
-                        <div className={styles.info_section_element}>
-                            <Accordion
-                            title={`WHEN?`}
-                            >
-                                {"RIGHT NOW BITCH."}
-                            </Accordion>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
