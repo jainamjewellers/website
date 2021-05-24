@@ -30,9 +30,9 @@
 
 .map_section iframe {
     border: 0;
-    width: fit-content;
-    height: fit-content;
-    filter: invert(90%)
+    width: 400px;
+    height: 400px;
+    filter: invert(100%)
 }
 
 .map_section_heading, .form_section_heading, .info_section_heading {

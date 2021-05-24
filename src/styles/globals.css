@@ -43,7 +43,7 @@ button{
 }
 
 .contactus_bg img{
-  filter: grayscale(1) brightness(0.15);
+  /* filter: grayscale(1) brightness(0.15); */
   object-fit: fill;
   width: 100%;
 }
