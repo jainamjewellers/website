@@ -30,4 +30,5 @@
 
 .help_995:hover{
     cursor: help;
+    text-decoration: underline;
 }
