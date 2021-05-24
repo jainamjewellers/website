@@ -31,7 +31,7 @@ export default function PriceTab(props) {
         <div className={styles.main_wrapper}>
             <div className={styles.table_wrapper}>
                 <span style={{marginTop: "50px"}}>
-                    {[...Array(rows-1)].map((e, i) => <ButtonGroup key={i} />)}
+                    {/* {[...Array(rows-1)].map((e, i) => <ButtonGroup key={i} />)} */}
                 </span>
                 <span>
                     <Table
@@ -39,7 +39,7 @@ export default function PriceTab(props) {
                     />
                 </span>
                 <span style={{marginTop: "50px"}}>
-                    {[...Array(rows-1)].map((e, i) => <ButtonGroup key={i} />)}
+                    {/* {[...Array(rows-1)].map((e, i) => <ButtonGroup key={i} />)} */}
                 </span>
             </div>
         </div>
