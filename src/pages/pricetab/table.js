@@ -57,9 +57,9 @@ export default function PriceTab(props) {
     return (
         <div className={styles.main_table_wrapper}>
             <div className={styles.table_head}>
-                <div className={styles.help_995} onClick={window.open("https://www.livemint.com/market/commodities/understanding-the-different-measures-of-purity-of-gold-11572343027713.html")}>99.50%</div>
+                <div className={styles.help_995} onClick={()=>window.open("https://www.livemint.com/market/commodities/understanding-the-different-measures-of-purity-of-gold-11572343027713.html")}>99.50%</div>
                 <div>Gold Coin Price</div>
-                <div className={styles.help_995} onClick={window.open("https://www.livemint.com/market/commodities/understanding-the-different-measures-of-purity-of-gold-11572343027713.html")}>99.90%</div>
+                <div className={styles.help_995} onClick={()=>window.open("https://www.livemint.com/market/commodities/understanding-the-different-measures-of-purity-of-gold-11572343027713.html")}>99.90%</div>
             </div>
             {priceObj && priceObj.length > 0 && priceObj.map((e, i) => {
                 return (<>
