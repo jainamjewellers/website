@@ -7,7 +7,7 @@ export default function Layout(props) {
     const handleScroll = () => {
         const offset = window.scrollY;
         //console.log(offset)
-        if (offset > 50) {
+        if (offset > 10) {
             setScrolled(true);
         }
         else {
@@ -33,7 +33,7 @@ export default function Layout(props) {
                 <div className={`${navbarClasses.join(" ")} ${styles.top_elements}`}>
                     <nav className={`${styles.navbar} navbar`}>
                         <a className={""} href="/">
-                            <img src="./img/logo.png" className={styles.jainam_logo} alt="..." />
+                            <img src="./img/logo_dark.png" className={styles.jainam_logo} alt="..." />
                         </a>
                         <div className={styles.navbar_link_group}>
                             <div className={styles.navbar_link}>

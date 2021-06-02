@@ -52,8 +52,12 @@ button{
   top: 0;
   left: 0;
   margin: auto;
-  background: #000!important;
+  background: #fff!important;
   z-index: 1000;
   width: fit-content;
+}
+
+*{
+  transition: all 0.4s ease-in-out
 }
 @import url("./Animation.css");

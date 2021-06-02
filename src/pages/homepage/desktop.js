@@ -1,15 +1,13 @@
 import styles from './Home.module.css'
 import animate from '../../styles/Animation.module.css'
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import PriceWidget from '../components/price/price'
 import Carousel from '../components/carousel/desktop'
 import HomeCarousel from './HomeCarousel'
-
 export default function Home() {
     useEffect(()=>{
     
     },[])
-
     const handleShare = async (link) => {
         let shareData= {
             title: 'JJ',
