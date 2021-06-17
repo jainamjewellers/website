@@ -25,22 +25,22 @@ const ButtonGroup = () => {
 }
 
 
-const socket = new WebSocket('ws://localhost:5000/ws/baseprice')
+/* const socket = new WebSocket('ws://localhost:5000/ws/baseprice') */
 
 export default function PriceTab(props) {
     const [rows, setRows] = useState(2)
     useEffect(()=>{
 
 
-        socket.onmessage = ({data})=>{
+        /* socket.onmessage = ({data})=>{
             console.log('Server says',data)
-        }
+        } */
     },[])
     return (
         <div className={styles.main_wrapper}>
             <div className={styles.table_wrapper}>
                 <span style={{marginTop: "50px"}}>
-                    <button onClick={()=>{socket.send('hello')}}></button>
+                    {/* <button onClick={()=>{socket.send('hello')}}></button> */}
                     {/* {[...Array(rows-1)].map((e, i) => <ButtonGroup key={i} />)} */}
                 </span>
                 <span>
