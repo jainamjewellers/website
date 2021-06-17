@@ -95,8 +95,8 @@
   padding: 0.25rem;
   margin-right: 1rem;
   padding-top: 0.5rem;
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .socials_element:hover {
@@ -105,8 +105,8 @@
 }
 
 .socials_element img {
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .footer_link_element {
