@@ -5,7 +5,7 @@ import isMobile from 'react-device-detect'
 export default function Index() {
     return (
         <Layout>
-            <div className="black_bg contactus_bg"><img src="/img/rene-bohmer-YeUVDKZWSZ4-unsplash.jpg"/></div>
+            {/* <div className="black_bg contactus_bg"><img src="/img/rene-bohmer-YeUVDKZWSZ4-unsplash.jpg"/></div> */}
 
             {
                 isMobile ?

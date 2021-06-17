@@ -14,12 +14,12 @@ export default function Layout(props) {
             setScrolled(false);
         }
     }
-    let navbarClasses = ['navbar'];
+    let navbarClasses = ['navbar scrolled dropIn'];
     if (scrolled) {
         navbarClasses.push('scrolled dropIn');
     }
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
+        /* window.addEventListener('scroll', handleScroll) */
     },[])
     return (
         <div className={styles.layout_wrapper}>

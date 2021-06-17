@@ -41,7 +41,23 @@ button{
   width: 100%;
   height: 100%;
 }
+.pull_right{
+  margin-left: auto;
+  padding-left: auto;
 
+}
+.pull_left{
+  margin-right: auto;
+  padding-right: auto;
+
+}
+.flexy_boi{
+  display: flex;
+}
+
+.flexy_boi.col{
+  flex-direction: column;
+}
 .contactus_bg img{
   /* filter: grayscale(1) brightness(0.15); */
   object-fit: fill;
@@ -59,5 +75,11 @@ button{
 
 *{
   transition: all 0.4s ease-in-out
+}
+.MuiAccordionDetails-root{
+  justify-content: center;
+}
+.MuiAccordionSummary-content{
+  justify-content: center
 }
 @import url("./Animation.css");
