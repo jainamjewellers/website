@@ -1,6 +1,6 @@
 .aboutus_Wrapper {
     padding-top: 100px;
-    width: 70%;
+    width: 100%;
     margin: auto;
 }
 
@@ -25,13 +25,12 @@
 }
 
 .square_box_link {
-    height: 300px;
-    width: 300px;
-    margin-bottom: 40px;
+    height: 290px;
+    width: 33.33%;
     justify-content: center;
     text-align: center;
     display: flex;
-    /* border: 1px solid black; */
+    border: 1px solid rgb(255, 255, 255);
     background: rgb(177, 177, 177);
     color: white;
     transition: all 0.2s ease-in-out;
@@ -47,4 +46,6 @@
 .square_box_link h2 {
     margin: auto;
     padding: 40px;
+    font-weight: 100;
+    font-size: 32px;
 }

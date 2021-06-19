@@ -35,6 +35,25 @@ a {
 }
 
 
+@font-face {
+  font-family: Avant;
+  font-weight: bold;
+  src: url('../fonts/Avant/ITCAvantGardeStdBold.woff');
+}
+
+@font-face {
+  font-family: Avant;
+  font-weight: 100;
+  src: url('../fonts/Avant/ITCAvantGardeStdXLt.woff');
+}
+
+@font-face {
+  font-family: Avant;
+  font-weight: 400;
+  src: url('../fonts/Avant/ITCAvantGardeStdBk.woff');
+}
+
+
 button{
   cursor: pointer;
 }
@@ -82,9 +101,9 @@ button{
   width: fit-content;
 }
 
-*{
+/* *{
   transition: all 0.2s ease-in-out
-}
+} */
 .MuiAccordionDetails-root{
   justify-content: center;
 }
