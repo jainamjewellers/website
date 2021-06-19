@@ -7,45 +7,57 @@ export default function AboutUs(props) {
             <div className={styles.square_box_links_wrapper}>
 
 
-                <div style={{backgroundImage: "url('https://picsum.photos/300/300')" }} className={styles.square_box_link}>
+                <div style={{ backgroundImage: "url('https://picsum.photos/300/300')" }} className={styles.square_box_link}>
                     <div className={styles.border_div}>
-                        <h2>Mangalsutras</h2>
+                        <div>
+                            <h2>Mangalsutras</h2>
+                        </div>
                     </div>
 
                 </div>
-                <div style={{backgroundImage: "url('https://picsum.photos/300/300')" }} className={styles.square_box_link}>
+                <div style={{ backgroundImage: "url('https://picsum.photos/300/300')" }} className={styles.square_box_link}>
 
                     <div className={styles.border_div}>
-                        <h2>Nawabi {/* Chains */}</h2>
+                        <div>
+                            <h2>Nawabi</h2>
+                        </div>
                     </div>
 
                 </div>
 
-                <div style={{backgroundImage: "url('https://picsum.photos/300/300')" }} className={styles.square_box_link}>
+                <div style={{ backgroundImage: "url('https://picsum.photos/300/300')" }} className={styles.square_box_link}>
 
                     <div className={styles.border_div}>
-                        <h2>Rudraksh {/* Chains */}</h2>
+                        <div>
+                            <h2>Rudraksh</h2>
+                        </div>
                     </div>
 
                 </div>
-                <div style={{backgroundImage: "url('https://picsum.photos/300/300')" }} className={styles.square_box_link}>
+                <div style={{ backgroundImage: "url('https://picsum.photos/300/300')" }} className={styles.square_box_link}>
 
                     <div className={styles.border_div}>
-                        <h2>Tulsi {/* Chains */}</h2>
+                        <div>
+                            <h2>Tulsi</h2>
+                        </div>
                     </div>
 
                 </div>
-                <div style={{backgroundImage: "url('https://picsum.photos/300/300')" }} className={styles.square_box_link}>
+                <div style={{ backgroundImage: "url('https://picsum.photos/300/300')" }} className={styles.square_box_link}>
 
                     <div className={styles.border_div}>
-                        <h2>Handmade {/* Chains */}</h2>
+                        <div>
+                            <h2>Handmade</h2>
+                        </div>
                     </div>
 
                 </div>
-                <div style={{backgroundImage: "url('https://picsum.photos/300/300')" }} className={styles.square_box_link}>
+                <div style={{ backgroundImage: "url('https://picsum.photos/300/300')" }} className={styles.square_box_link}>
 
                     <div className={styles.border_div}>
-                        <h2>Gold Coins</h2>
+                        <div>
+                            <h2>Gold Coins</h2>
+                        </div>
                     </div>
 
                 </div>

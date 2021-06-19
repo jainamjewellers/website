@@ -32,37 +32,68 @@
     display: flex;
     border: 1px solid rgb(255, 255, 255);
     background-size: cover;
+    background: #c2c2c2!important;
     color: white;
+    padding: 40px;
+    transition: background-color 0.4s ease-in-out;
 }
+
 .border_div {
     background: #c2c2c2!important;
-    transition: background-color 0.4s;
+    transition: background-color 0.4s ease-in-out;
 }
+
 .border_div:hover {
     background: #fff!important;
-    transition: background-color 0.4s;
+    transition: background-color 0.4s ease-in-out;
 }
-.square_box_link div{
-    width:100%;
+
+.square_box_link div {
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
     margin: auto;
-    transition: width 0.4s ease-in-out,height 0.4s ease-in-out,background-color 0.4s;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out, background-color 0.4s ease-in-out;
 }
 
-.square_box_link:hover div{
-    width:100%;
+.square_box_link:hover div {
+    background: #fff!important;
+    width: 100%;
     height: 100%;
     /* border: 1px solid black; */
-    transition: width 0.4s ease-in-out,height 0.4s ease-in-out,background-color 0.4s;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out, background-color 0.4s ease-in-out;
 }
 
 .square_box_link:hover {
+    background: #fff!important;
     color: black;
-    transition: width 0.4s ease-in-out,height 0.4s ease-in-out,background-color 0.4s;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out, background-color 0.4s ease-in-out;
     cursor: pointer;
+}
+
+.square_box_link > div> div {
+    background: #c2c2c2!important;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.square_box_link:hover  > div> div{
+    background: #fff;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.square_box_link > div {
+    border-radius: 50%;
+    transition: border-radius 0.4s ease-in-out;
+    
+}
+
+.square_box_link:hover  > div{
+    background: #fff;
+    border-radius: 0;
+    transition: border-radius 0.4s ease-in-out;
+    border: 1px solid black;
 }
 
 /* .square_box_link:hover div{
@@ -75,8 +106,8 @@
     font-weight: 400;
     font-size: 32px;
 }
+
 .square_box_link:hover h2 {
     font-weight: 100;
-   
-   /*  font-weight: bold; */
+    /*  font-weight: bold; */
 }
