@@ -91,7 +91,7 @@ export default function Contact(props) {
                 <div className={styles.col_flex_wrapper}>
                     <div className={styles.map_section}>
                         {/* <SimpleMap/> */}
-                        <iframe allowFullScreen="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.5022301860713!2d72.82839851489919!3d18.95341458715845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf5cbadc4d69%3A0x861d1967b93e067e!2sJainam%20Jewellers!5e0!3m2!1sen!2sin!4v1621784029012!5m2!1sen!2sin" loading="lazy"></iframe>
+                        <iframe allowFullScreen="true" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.5022301860713!2d72.82839851489919!3d18.95341458715845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf5cbadc4d69%3A0x861d1967b93e067e!2sJainam%20Jewellers!5e0!3m2!1sen!2sin!4v1621784029012!5m2!1sen!2sin"></iframe>
 
                     </div>
                     <div className={styles.address_Table}>
@@ -134,7 +134,7 @@ export default function Contact(props) {
                                     aria-controls="panel1a-content"
                                     id="panel1a-header"
                                 >
-                                    <div className={styles.info_section_heading}>Looking for direction?</div>
+                                    <div className={styles.info_section_heading}>Looking for directions?</div>
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <div style={{ textAlign: "left" }}>
