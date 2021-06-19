@@ -1,0 +1,50 @@
+.aboutus_Wrapper {
+    padding-top: 100px;
+    width: 70%;
+    margin: auto;
+}
+
+.info_box_Wrapper {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.info_box_Wrapper h2 {
+    letter-spacing: 5px;
+    font-size: 32px;
+}
+
+.square_box_links_wrapper {
+    margin: 100px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.square_box_link {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 40px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    /* border: 1px solid black; */
+    background: rgb(177, 177, 177);
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.square_box_link:hover {
+    color: black;
+    background: #fff;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.square_box_link h2 {
+    margin: auto;
+    padding: 40px;
+}

@@ -60,9 +60,9 @@ export default function Layout(props) {
             </div>
             {children}
             <footer className={styles.footer_main_wrap}>
-                <div className={styles.links_header}>SITE LINKS</div>
+                {/* <div className={styles.links_header}>SITE LINKS</div> */}
                 <div className={styles.footer_link_wrapper}>
-                    <div>
+                    {/* <div>
                         <div className={styles.footer_link_element}>LINK 11</div>
                     </div>
                     <div>
@@ -70,7 +70,7 @@ export default function Layout(props) {
                     </div>
                     <div>
                         <div className={styles.footer_link_element}>LINK 13</div>
-                    </div>
+                    </div> */}
                     <div className={styles.socials_wrapper}>
                         <div onClick={()=>window.open("https://api.whatsapp.com/send/?phone=917045180822&text")} className={styles.socials_element}>
                             <img

@@ -240,6 +240,7 @@ export default function Contact(props) {
                         </Accordion>
                         </div>
                     </div>
+                    <div style={{height: "150px"}}>{` `}</div>
                     {/* 
                         <div onClick={()=>window.open("https://api.whatsapp.com/send/?phone=917045180822&text")} className={styles.info_section_element}>
                             <span><img className={styles.link_image} src="/img/whatsapp.svg"/></span>

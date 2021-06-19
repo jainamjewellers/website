@@ -15,6 +15,7 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: Lato,Montserrat;
 }
 
 @font-face {
@@ -22,9 +23,17 @@ a {
   src: url("../fonts/Montserrat-Regular.ttf");
 }
 
-div {
-  font-family: Montserrat;
+@font-face {
+  font-family: Lato;
+  src: url('../fonts/Lato/Lato-Regular.ttf');
 }
+
+@font-face {
+  font-family: Lato;
+  font-weight: 100;
+  src: url('../fonts/Lato/Lato-Light.ttf');
+}
+
 
 button{
   cursor: pointer;
@@ -74,7 +83,7 @@ button{
 }
 
 *{
-  transition: all 0.4s ease-in-out
+  transition: all 0.2s ease-in-out
 }
 .MuiAccordionDetails-root{
   justify-content: center;
