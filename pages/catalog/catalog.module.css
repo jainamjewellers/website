@@ -75,7 +75,7 @@
 
 .square_box_link > div> div {
     background: #c2c2c2!important;
-    transition: background-color 0.4s ease-in-out;
+    /* transition: background-color 0.4s ease-in-out; */
 }
 
 .square_box_link:hover  > div> div{
