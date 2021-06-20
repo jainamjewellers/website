@@ -35,12 +35,12 @@
     background: #c2c2c2!important;
     color: white;
     padding: 40px;
-    transition: background-color 0.4s ease-in-out;
+    /* transition: background-color 0.4s ease-in-out; */
 }
 
 .border_div {
     background: #c2c2c2!important;
-    transition: background-color 0.4s ease-in-out;
+    /* transition: background-color 0.4s ease-in-out; */
 }
 
 .border_div:hover {
