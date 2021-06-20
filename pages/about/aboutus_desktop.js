@@ -5,7 +5,7 @@ export default function AboutUs(props) {
         <div className={styles.aboutus_Wrapper}>
             <div className={styles.info_box_Wrapper}>
                 <section>
-                    <h2>We're Artisans</h2>
+                    <h2>We are Artisans</h2>
                     <p>Our mission is to provide ethically sourced, contemporary, affordable and exclusive collections of fine jewelry that are carefully selected to offer an array of classic designs that are made to display the individuality of people who wear them.</p>
                     <p>We envision setting new dimensions to the jewelry industry in tune with the global market standards of quality, making each of our creations a unique work of art with a cherished story to tell the world.</p>
                 </section>

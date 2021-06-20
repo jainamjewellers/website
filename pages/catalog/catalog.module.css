@@ -85,7 +85,7 @@
 
 .square_box_link > div {
     border-radius: 50%;
-    transition: border-radius 0.4s ease-in-out;
+    /* transition: border-radius 0.4s ease-in-out; */
     
 }
 

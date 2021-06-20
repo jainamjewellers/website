@@ -36,9 +36,9 @@ export default function Layout(props) {
                             <img src="./img/logo_dark.png" className={styles.jainam_logo} alt="..." />
                         </a>
                         <div className={styles.navbar_link_group}>
-                            {/* <div className={styles.navbar_link}>
+                            <div className={styles.navbar_link}>
                                 <a className={styles.navbar_link_label} href="/">Home</a>
-                            </div> */}
+                            </div>
                             <div className={styles.navbar_link}>
                                 <a className={styles.navbar_link_label} href="/about">About</a>
                             </div>
