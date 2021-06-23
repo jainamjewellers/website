@@ -11,6 +11,7 @@ import Radio from '@material-ui/core/Radio';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
+import {submitForm} from '../../actions/append'
 
 export default function Contact(props) {
     useEffect(() => {
@@ -65,6 +66,9 @@ export default function Contact(props) {
     }
     const ischecked = (val) => {
         return options.includes(val)
+    }
+    const handleSubmit = () =>{
+        submitForm([fullname,email,selectedValue,options.toString()])
     }
 
     /* const Accordion = (props) => {
@@ -233,7 +237,7 @@ export default function Contact(props) {
                             <Button
                                 style={{ marginBottom: "30px" }}
                                 variant="contained"
-                                onClick={() => exPand(false)}
+                                onClick={() => {handleSubmit() ; exPand(false)}}
                             >
                                 Submit
                         </Button>
