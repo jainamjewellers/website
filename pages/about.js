@@ -1,4 +1,4 @@
-import Layout from './components/layout_desktop'
+import Layout from './components/layout'
 import AboutUs from './about/aboutus_desktop'
 import AboutUsMobile from './about/aboutus_mobile'
 import isMobile from 'react-device-detect'

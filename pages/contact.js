@@ -1,4 +1,4 @@
-import Layout from './components/layout_desktop'
+import Layout from './components/layout'
 import Contact from './contactpage/contactdesktop'
 import ContactMobile from './contactpage/contactmobile'
 import isMobile from 'react-device-detect'

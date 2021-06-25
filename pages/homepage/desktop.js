@@ -27,17 +27,14 @@ export default function Home() {
     
     return (
         <div className={styles.homepage_content_wrapper}>
-            <HomeCarousel/>
-            <div className={styles.body_section}>
+            {/* <div className={styles.body_section}>
                 <div className={`${styles.banner_content} fade-2s`}>
                     <div className={styles.content_heading}>Finest Jewellery</div>
                     <div className={`${styles.sub_heading} fade-5s`}>designs that inspire</div>
                     <div className={`${styles.sub_heading} fade-10s`}>our collection you must admire</div>
                     <button onClick={()=>handleShare()} className={styles.button1}>View now</button>
                 </div>
-
-            </div>
-            {/* <Carousel></Carousel> */}
+            </div> */}
         </div>
     )
 }
