@@ -1,16 +1,23 @@
 import Layout from './components/layout'
+import LayoutMobile from './components/layout_mobile'
 import Home from './homepage/desktop'
 import HomeMobile from './homepage/mobile'
-import isMobile from 'react-device-detect'
+import { isMobile } from 'react-device-detect'
 export default function Index() {
-  return (
-    <Layout>
-      {isMobile?
-      <HomeMobile>
-      </HomeMobile>
-      :
-      <Home>
-      </Home>}
-    </Layout>
-  )
+  return (<>
+
+    {
+      isMobile ?
+        <LayoutMobile>
+          < HomeMobile >
+          </HomeMobile >
+        </LayoutMobile >
+        :
+        <Layout>
+          <Home>
+          </Home>
+        </Layout>
+    }
+
+  </>)
 }
