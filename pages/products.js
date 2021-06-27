@@ -1,8 +1,8 @@
 import Layout from './components/layout'
-import isMobile from 'react-device-detect'
+import isMobile from './components/isMobile'
 import OurCreation from './catalog/catalog_desktop'
 import OurCreationMobile from './catalog/catalog_mobile'
-export default function Index() {
+export default function Index({isMobile}) {
     return (
         <Layout>
             {/* <div className="black_bg contactus_bg"><img src="/img/rene-bohmer-YeUVDKZWSZ4-unsplash.jpg"/></div> */}
@@ -19,4 +19,12 @@ export default function Index() {
             }
         </Layout>
     )
+}
+
+export async function getServerSideProps({ req }) {
+    return {
+        props: {
+            isMobile: isMobile(req),
+        },
+    }
 }
