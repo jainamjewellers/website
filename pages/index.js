@@ -3,6 +3,7 @@ import LayoutMobile from './components/layout_mobile'
 import Home from './homepage/desktop'
 import HomeMobile from './homepage/mobile'
 import isMobile from '../middleware/isMobile'
+
 export default function Index({isMobile}) {
   return (<>
 

@@ -27,9 +27,10 @@ export default function Home() {
     
     return (
         <div className={styles.homepage_content_wrapper}>
-            <div className={styles.slow_gun}>
+            {/* <div className={styles.slow_gun}>
                 <img style={{maxHeight:"500px"}} src="/img/slowgun.png" />
-            </div>
+            </div> */}
+            <PriceWidget></PriceWidget>
             {/* <div className={styles.body_section}>
                 <div className={`${styles.banner_content} fade-2s`}>
                     <div className={styles.content_heading}>Finest Jewellery</div>
