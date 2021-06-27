@@ -1,5 +1,5 @@
 .homepage_content_wrapper {
-  
+  display: flex;
 }
 
 .body_section {
@@ -55,9 +55,27 @@
   animation: come_from_left 30s ease;
 }
 
+.tagline{
+  /* animation: come_from_left 2s ease-in-out; */
+  padding-left: 50px;
+  text-align: left;
+}
+.tagline div{
+  font-size: 50px;
+}
+.tagline div:nth-child(1){
+  animation: come_from_left 0.4s ease-in-out;
+}
+.tagline div:nth-child(2){
+  animation: come_from_left 0.6s ease-in-out;
+}
+.tagline div:nth-child(3){
+  animation: come_from_left 0.8s ease-in-out;
+}
+
 @keyframes come_from_left{
   from{
-    transform: translateX(-1000px)
+    transform: translateX(-500px)
   }
   to{
     transform: translateX(0px)

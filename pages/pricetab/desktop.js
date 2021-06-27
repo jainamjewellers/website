@@ -25,16 +25,14 @@ const ButtonGroup = () => {
 }
 
 
-/* const socket = new WebSocket('ws://localhost:5000/ws/baseprice') */
+
 
 export default function PriceTab(props) {
     const [rows, setRows] = useState(2)
     useEffect(()=>{
 
 
-        /* socket.onmessage = ({data})=>{
-            console.log('Server says',data)
-        } */
+        
     },[])
     return (
         <div className={styles.main_wrapper}>

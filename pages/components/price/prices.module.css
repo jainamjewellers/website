@@ -21,12 +21,23 @@
 }
 
 .current_price_value{
-    color: rgb(255, 255, 255)!important;
+    color: rgb(255, 255, 255);
     background: #000000;
     text-align: center;
     border-radius: 1rem;
     padding: 0.25rem;
     margin-bottom: 0.5rem;
+    transition:all 1s cubic-bezier(0, 0.69, 0.78, 0.99);
+}
+.stonks{
+    background: chartreuse;
+    color: black!important;
+    transition:all 1s cubic-bezier(0, 0.69, 0.78, 0.99);
+}
+.crash{
+    background: red;
+    color: black!important;
+    transition:all 1s cubic-bezier(0, 0.69, 0.78, 0.99);
 }
 .delta_price_value {
     color: rgb(255, 255, 255)!important;
