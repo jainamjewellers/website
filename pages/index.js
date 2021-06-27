@@ -2,8 +2,8 @@ import Layout from './components/layout'
 import LayoutMobile from './components/layout_mobile'
 import Home from './homepage/desktop'
 import HomeMobile from './homepage/mobile'
-import { isMobile } from 'react-device-detect'
-export default function Index() {
+import isMobile from './components/isMobile'
+export default function Index({isMobile}) {
   return (<>
 
     {
@@ -20,4 +20,12 @@ export default function Index() {
     }
 
   </>)
+}
+
+export async function getServerSideProps({req}){
+  return{
+    props:{
+      isMobile: isMobile(req),
+    },
+  }
 }

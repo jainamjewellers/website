@@ -1,10 +1,17 @@
-.colapsable_wrapper{
-    background: #00000044;
+.colapsable_wrapper {
+    background: #ffbc00;
     display: flex;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
 }
 
-.HamButton{
+.colapsable_wrapper_hide_div div {
+    display: none;
+}
+
+.HamButton {
     position: absolute;
     height: 2rem;
     width: 2rem;
@@ -17,18 +24,54 @@
     cursor: pointer;
 }
 
-.HamButton div{
-    height: 0.2rem;
+.expand_ham::after {
+    background: #00000085;
+    z-index: 999999;
+    content: "";
+    height: 100vh;
+    width: 100vh;
+    position: fixed;
+    top: 100px;
+    transition: all 0.3s ease-in-out;
+    animation: scrollDown 0.3s ease-in-out;
+}
+
+.HamButton div {
+    height: 0.25rem;
     width: 100%;
     margin: auto;
     background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+/* #__next > div > div.LayoutMobile_overlaywrapper__3POMo > div:nth-child(2) > div > div:nth-child(1) */
+.top_x{
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0.9rem;
+    left: 0.0rem;
 }
 
-.overlaywrapper{
-    height: 100px; 
-    width: 100%; 
-    background: #00000044; 
-    display: flex; 
-    position: fixed; 
-    top: 0;
+.bot_x{
+    transform: rotate(135deg);
+    position: absolute;
+    top: 0.9rem;
+    left: 0.0rem;
+}
+
+.overlaywrapper {
+    height: 100px;
+    width: 100%;
+    background: #b3b3b3;
+    display: flex;
+    /* position: fixed; 
+    top: 0; */
+}
+
+@keyframes scrollDown {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0px);
+    }
 }
