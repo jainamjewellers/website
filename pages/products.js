@@ -1,5 +1,5 @@
 import Layout from './components/layout'
-import isMobile from './components/isMobile'
+import isMobile from '../middleware/isMobile'
 import OurCreation from './catalog/catalog_desktop'
 import OurCreationMobile from './catalog/catalog_mobile'
 export default function Index({isMobile}) {

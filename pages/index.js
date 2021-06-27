@@ -2,7 +2,7 @@ import Layout from './components/layout'
 import LayoutMobile from './components/layout_mobile'
 import Home from './homepage/desktop'
 import HomeMobile from './homepage/mobile'
-import isMobile from './components/isMobile'
+import isMobile from '../middleware/isMobile'
 export default function Index({isMobile}) {
   return (<>
 

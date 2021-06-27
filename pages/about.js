@@ -1,7 +1,7 @@
 import Layout from './components/layout'
 import AboutUs from './about/aboutus_desktop'
 import AboutUsMobile from './about/aboutus_mobile'
-import isMobile from './components/isMobile'
+import isMobile from '../middleware/isMobile'
 
 export default function Index({ isMobile }) {
     return (

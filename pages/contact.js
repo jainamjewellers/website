@@ -1,7 +1,7 @@
 import Layout from './components/layout'
 import Contact from './contactpage/contactdesktop'
 import ContactMobile from './contactpage/contactmobile'
-import isMobile from './components/isMobile'
+import isMobile from '../middleware/isMobile'
 export default function Index({isMobile}) {
     return (
         <Layout>
