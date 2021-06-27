@@ -31,7 +31,7 @@
     height: 100vh;
     width: 100vh;
     position: fixed;
-    top: 100px;
+    top: 24rem;
     transition: all 0.3s ease-in-out;
     animation: scrollDown 0.3s ease-in-out;
 }
@@ -59,7 +59,7 @@
 }
 
 .overlaywrapper {
-    height: 100px;
+    height: 24rem;
     width: 100%;
     background: #b3b3b3;
     display: flex;
@@ -67,9 +67,16 @@
     top: 0; */
 }
 
+.navbar_link{
+    font-weight: 600;
+    font-size: 16pt;
+    line-height: 16pt;
+    padding: 1rem;
+}
+
 @keyframes scrollDown {
     from {
-        transform: translateY(-100px);
+        transform: translateY(-24rem);
     }
     to {
         transform: translateY(0px);

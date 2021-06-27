@@ -16,12 +16,12 @@ export default function Layout(props) {
                 <meta name="description" content="Wholesale jewellery store that offers a variety of custom designs made to order."></meta>
             </Head>
             <div className={stylesm.layout_wrapper}>
-                <div style={{ height: hamburger ? "0px" : "100px"}} className={`${stylesm.colapsable_wrapper} ${hamburger?stylesm.colapsable_wrapper_hide_div:""}`}>
-                    <div>Home</div>
-                    <div>About</div>
-                    <div>Products</div>
-                    <div>Blog</div>
-                    <div>Contact</div>
+                <div style={{ height: hamburger ? "0rem" : "24rem"}} className={`${stylesm.colapsable_wrapper} ${hamburger?stylesm.colapsable_wrapper_hide_div:""}`}>
+                    <div onClick={()=>window.location.href="/"} className={stylesm.navbar_link}>Home</div>
+                    <div onClick={()=>window.location.href="/about"} className={stylesm.navbar_link}>About</div>
+                    <div onClick={()=>window.location.href="/products"} className={stylesm.navbar_link}>Products</div>
+                    <div onClick={()=>window.location.href="/blog"} className={stylesm.navbar_link}>Blog</div>
+                    <div onClick={()=>window.location.href="/contact"} className={stylesm.navbar_link}>Contact</div>
                 </div>
                 <div className={` ${stylesm.overlaywrapper}`}>
                     <div >
