@@ -1,6 +1,5 @@
 .homepage_content_wrapper {
-  background: rgb(25 25 25 / 70%);
-  position: relative;
+  
 }
 
 .body_section {
@@ -50,4 +49,17 @@
 .content_right_pane {
   align-content: center;
   margin: auto
+}
+
+.slow_gun{
+  animation: come_from_left 30s ease;
+}
+
+@keyframes come_from_left{
+  from{
+    transform: translateX(-1000px)
+  }
+  to{
+    transform: translateX(0px)
+  }
 }

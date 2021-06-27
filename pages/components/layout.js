@@ -1,26 +1,11 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
-import { isMobile } from 'react-device-detect';
 import styles from './Layout.module.css'
-import stylesm from './LayoutMobile.module.css'
 export default function Layout(props) {
     const { children } = props
-    const [scrolled, setScrolled] = useState(false);
+    
     const [hamburger, setHam] = useState(true);
-    const handleScroll = () => {
-        const offset = window.scrollY;
-        //console.log(offset)
-        if (offset > 10) {
-            setScrolled(true);
-        }
-        else {
-            setScrolled(false);
-        }
-    }
-    let navbarClasses = ['navbar scrolled dropIn'];
-    if (scrolled) {
-        navbarClasses.push('scrolled dropIn');
-    }
+    
     useEffect(() => {
         /* window.addEventListener('scroll', handleScroll) */
     }, [])
@@ -34,7 +19,7 @@ export default function Layout(props) {
             </Head>
             <div className={styles.layout_wrapper}>
                 <div className={styles.main_header_wrapper}>
-                    <div className={`${navbarClasses.join(" ")} ${styles.top_elements}`}>
+                    <div className={`${styles.top_elements}`}>
                         <nav className={`${styles.navbar} navbar`}>
                             <a className={""} href="/">
                                 <img src="./img/logo_dark.png" className={styles.jainam_logo} alt="..." />
