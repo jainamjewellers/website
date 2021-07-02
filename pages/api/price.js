@@ -11,14 +11,23 @@ const handler = async (req, res) => {
   }
 
   async function apiCall(req) {
-    let geturl = "https://www.bullionvault.com/view_market_json.do?callback=jQuery35105053285641317669_1619715961271&marketWidth=1&securityId=AUXZU&considerationCurrency=USD"
+    var d = new Date();
+    var n = d.getTime();
+    //console.log(n)
+    let geturl = `http://spngoldlivebroadcast.noip.us:8888/VOTSBroadcast/Services/xml/a/%20mumbai?_=${n}`
     try {
       let requestOptions = {
         method: 'get',
-        url: geturl
+        url: geturl,
+        timeout: 1000
       };
       let result = await axios(requestOptions);
-      return result.data.toString().replace(/.*?({.*}).*/, "$1")
+      let split_array =  result.data.split("|")
+      let mumbai = split_array[3].split(",")
+      let mumbai_999 = mumbai[3]
+      //console.log(mumbai_999)
+      //return result.data.toString().replace(/.*?({.*}).*/, "$1")
+      return mumbai_999
     } catch (error) {
       return { objects: [] }
     }

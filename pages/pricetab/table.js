@@ -1,6 +1,7 @@
 import PriceWidget from '../components/price/price'
 import { useState, useEffect } from 'react'
 import { getBasePrice, getPortalPrices } from '../../actions/pricetable'
+import { getPrice } from '../../actions/common'
 import _ from "lodash";
 import styles from './table.module.css'
 
@@ -11,7 +12,8 @@ export default function PriceTab(props) {
     const [priceObj, setPriceObj] = useState([{}])
 
     const fetchData = async (price_array) => {
-        let x = parseInt(await getBasePrice(999))
+        //let x = parseInt(await getBasePrice(999))
+        let x = parseInt(await getPrice())
         let y = parseInt(await getBasePrice(995))
         let labour = _.filter(price_array, { type: 'labour' }).map(v => v.title);
         let z = parseInt(labour[0])
