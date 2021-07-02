@@ -11,7 +11,7 @@ import Radio from '@material-ui/core/Radio';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
-import {submitForm} from '../../actions/append'
+import { submitForm } from '../../actions/append'
 
 export default function Contact(props) {
     useEffect(() => {
@@ -67,8 +67,8 @@ export default function Contact(props) {
     const ischecked = (val) => {
         return options.includes(val)
     }
-    const handleSubmit = () =>{
-        submitForm([fullname,email,selectedValue,options.toString()])
+    const handleSubmit = () => {
+        submitForm([fullname, email, selectedValue, options.toString()])
     }
 
     /* const Accordion = (props) => {
@@ -93,16 +93,92 @@ export default function Contact(props) {
                 <div className={styles.map_section_subheading}>Our door is always open for a cup of tea and conversation</div>
 
                 <div className={styles.col_flex_wrapper}>
-                    <div className={styles.map_section}>
-                        {/* <SimpleMap/> */}
-                        <iframe allowFullScreen="true" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.5022301860713!2d72.82839851489919!3d18.95341458715845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf5cbadc4d69%3A0x861d1967b93e067e!2sJainam%20Jewellers!5e0!3m2!1sen!2sin!4v1621784029012!5m2!1sen!2sin"></iframe>
 
+                    <div style={{ /* marginRight: "auto", */margin: "auto", width: "500px",textTransform:"none" }}><Accordion expanded={true} onChange={() => { exPand(!expanded) }}>
+                        <AccordionSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel1a-content"
+                            id="panel1a-header"
+                        >
+                            <div className={styles.info_section_heading}>Getting in touch is easy!</div>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <div>
+                                <TextField style={{ width: "300px" }} onChange={handleNameChange} fullwidth id="standard-basic" label="Full Name" />
+                            </div>
+                        </AccordionDetails>
+                        <AccordionDetails>
+                            <div>
+                                <TextField style={{ width: "300px" }} onChange={handleEmail} fullwidth id="standard-basic" label="Contact Number / Email" />
+                            </div>
+                        </AccordionDetails>
+                        <AccordionDetails>
+                            <div className="flexy_boi col">
+                                <div className={styles.form_label}>
+                                    {`Are you a Buyer or Seller?`}
+                                </div>
+                                <div style={{justifyContent:"space-around"}} className="flexy_boi">
+                                <FormControlLabel
+                                    checked={selectedValue === 'buyer'}
+                                    onChange={handleRadioChange}
+                                    control={<Radio color="primary" />}
+                                    value="buyer"
+                                    label="Buyer"
+                                    name="radio-button-demo"
+                                    inputProps={{ 'aria-label': 'Buyer' }}
+                                />
+                                <FormControlLabel
+                                    checked={selectedValue === 'seller'}
+                                    onChange={handleRadioChange}
+                                    control={<Radio color="primary" />}
+                                    value="seller"
+                                    label="Seller"
+                                    name="radio-button-demo"
+                                    inputProps={{ 'aria-label': 'Seller' }}
+                                />
+                                </div>
+                            </div>
+                        </AccordionDetails>
+                        <AccordionDetails>
+                            <div className="flexy_boi col">
+                                <div className={styles.form_label}>
+                                    {`Which products are you interested in?`}
+                                </div>
+                                {checkBoxOptions.map((e, i) => {
+                                    return (
+                                        <FormControlLabel
+                                            control={
+                                                <Checkbox
+                                                    checked={ischecked(e)}
+                                                    onClick={handleCheckBox}
+                                                    value={e}
+                                                    color="primary"
+                                                />
+                                            }
+                                            label={e}
+                                        />
+                                    )
+                                })}
+                            </div>
+                        </AccordionDetails>
+                        <Button
+                            style={{ marginBottom: "30px" }}
+                            variant="contained"
+                            onClick={() => { handleSubmit(); exPand(false) }}
+                        >
+                            Submit
+                        </Button>
+                    </Accordion>
                     </div>
+
+
+                    {/*  */}
+
                     <div className={styles.address_Table}>
 
                         <div style={{ width: "500px" }}>
                             <div className={styles.address_row}>
-                                <div className={styles.form_section_heading}>Head Office - <strong>MUMBAI</strong></div>
+                                <div className={styles.form_section_heading}>Head Office - <strong>Mumbai</strong></div>
                             </div>
                             <div className={styles.address_row}>
                                 <div>{`Building No. 18/A, Room No. 8, 4th Floor 1st Bhoiwada, Bhuleshwar Road , Mumbai, Maharashtra 400002`}</div>
@@ -124,6 +200,11 @@ export default function Contact(props) {
                                 </div>
                             </div>
                         </div>
+                        <div className={styles.map_section}>
+                            {/* <SimpleMap/> */}
+                            <iframe allowFullScreen="true" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.5022301860713!2d72.82839851489919!3d18.95341458715845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf5cbadc4d69%3A0x861d1967b93e067e!2sJainam%20Jewellers!5e0!3m2!1sen!2sin!4v1621784029012!5m2!1sen!2sin"></iframe>
+
+                        </div>
                     </div>
 
                 </div>
@@ -131,7 +212,7 @@ export default function Contact(props) {
 
                     <div className={styles.heading}></div>
                     <div className="flexy_boi">
-                        <div style={{ marginLeft: "auto",paddingRight: "20px",  width:"500px" }}>
+                        {/* <div style={{ marginLeft: "auto",paddingRight: "20px",  width:"500px" }}>
                             <Accordion>
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}
@@ -166,85 +247,9 @@ export default function Contact(props) {
                                 </AccordionDetails>
                             </Accordion>
 
-                        </div>
-                        <div style={{ marginRight: "auto",  width:"500px"  }}><Accordion expanded={expanded} onChange={() => { exPand(!expanded) }}>
-                            <AccordionSummary
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel1a-content"
-                                id="panel1a-header"
-                            >
-                                <div className={styles.info_section_heading}>Getting in touch is easy!</div>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                                <div>
-                                    <TextField style={{ width: "300px" }} onChange={handleNameChange} fullwidth id="standard-basic" label="Full Name" />
-                                </div>
-                            </AccordionDetails>
-                            <AccordionDetails>
-                                <div>
-                                    <TextField style={{ width: "300px" }} onChange={handleEmail} fullwidth id="standard-basic" label="Contact Number / Email" />
-                                </div>
-                            </AccordionDetails>
-                            <AccordionDetails>
-                                <div className="flexy_boi col">
-                                    <div className={styles.form_label}>
-                                        {`Are you a Buyer or Seller?`}
-                                    </div>
-                                    <FormControlLabel
-                                        style={{ width: "200px" }}
-                                        checked={selectedValue === 'buyer'}
-                                        onChange={handleRadioChange}
-                                        control={<Radio color="primary" />}
-                                        value="buyer"
-                                        label="Buyer"
-                                        name="radio-button-demo"
-                                        inputProps={{ 'aria-label': 'Buyer' }}
-                                    />
-                                    <FormControlLabel
-                                        style={{ width: "200px" }}
-                                        checked={selectedValue === 'seller'}
-                                        onChange={handleRadioChange}
-                                        control={<Radio color="primary" />}
-                                        value="seller"
-                                        label="Seller"
-                                        name="radio-button-demo"
-                                        inputProps={{ 'aria-label': 'Seller' }}
-                                    />
-                                </div>
-                            </AccordionDetails>
-                            <AccordionDetails>
-                                <div className="flexy_boi col">
-                                    <div className={styles.form_label}>
-                                        {`Which products are you interested in?`}
-                                    </div>
-                                    {checkBoxOptions.map((e, i) => {
-                                        return (
-                                            <FormControlLabel
-                                                control={
-                                                    <Checkbox
-                                                        checked={ischecked(e)}
-                                                        onClick={handleCheckBox}
-                                                        value={e}
-                                                        color="primary"
-                                                    />
-                                                }
-                                                label={e}
-                                            />
-                                        )
-                                    })}
-                                </div>
-                            </AccordionDetails>
-                            <Button
-                                style={{ marginBottom: "30px" }}
-                                variant="contained"
-                                onClick={() => {handleSubmit() ; exPand(false)}}
-                            >
-                                Submit
-                        </Button>
-                        </Accordion>
-                        </div>
+                        </div> */}
                     </div>
-                    <div style={{height: "150px"}}>{` `}</div>
+                    <div style={{ height: "150px" }}>{` `}</div>
                     {/* 
                         <div onClick={()=>window.open("https://api.whatsapp.com/send/?phone=917045180822&text")} className={styles.info_section_element}>
                             <span><img className={styles.link_image} src="/img/whatsapp.svg"/></span>
