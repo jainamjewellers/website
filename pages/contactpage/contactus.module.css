@@ -23,6 +23,7 @@
     width: 500px;
     text-transform: none;
     border: 1px solid #000;
+    height: fit-content;
 }
 
 .info_section_heading {
