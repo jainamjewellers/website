@@ -16,10 +16,10 @@
 }
 
 .col_flex_wrapper_inner {
-    /* marginRight: "auto", */
     margin-top: 0px!important;
     padding-top: 20px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: 50px;
     width: 500px;
     text-transform: none;
     border: 1px solid #000;
