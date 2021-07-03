@@ -220,6 +220,7 @@ export default function Contact(props) {
                             style={{ marginBottom: "30px" }}
                             variant="contained"
                             onClick={() => { handleSubmit();}}
+                            disabled={!expanded}
                         >
                             Submit
                         </Button>
