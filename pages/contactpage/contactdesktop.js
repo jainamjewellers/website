@@ -12,6 +12,21 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
 import { submitForm } from '../../actions/append'
+import { makeStyles } from '@material-ui/core/styles';
+import Alert from '@material-ui/lab/Alert';
+import IconButton from '@material-ui/core/IconButton';
+import Collapse from '@material-ui/core/Collapse';
+import CloseIcon from '@material-ui/icons/Close';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        width: '100%',
+        '& > * + *': {
+            marginTop: theme.spacing(2),
+        },
+    },
+}));
+
 
 export default function Contact(props) {
     useEffect(() => {
@@ -20,6 +35,7 @@ export default function Contact(props) {
 
     const [isopen, open] = useState(false)
     const [expanded, exPand] = useState(false)
+    const [isAlert, setAlert] = useState(false);
 
     const [fullname, setName] = useState("")
     const handleNameChange = (e) => {
@@ -68,6 +84,12 @@ export default function Contact(props) {
         return options.includes(val)
     }
     const handleSubmit = () => {
+        exPand(false)
+        setName("")
+        setEmail("")
+        selectValue("")
+        setOptions([])
+        alert("Your response has been recorded") 
         submitForm([fullname, email, selectedValue, options.toString()])
     }
 
@@ -88,36 +110,56 @@ export default function Contact(props) {
     } */
     return (
         <div>
+            <Collapse in={isAlert}>
+                <Alert
+                    action={
+                        <IconButton
+                            aria-label="close"
+                            color="inherit"
+                            size="small"
+                            onClick={() => {
+                                setAlert(false);
+                            }}
+                        >
+                            <CloseIcon fontSize="inherit" />
+                        </IconButton>
+                    }
+                >
+                    Close me!
+                </Alert>
+                <Button
+                    disabled={isAlert}
+                    variant="outlined"
+                    onClick={() => {
+                        setAlert(true);
+                    }}
+                >
+                    Re-open
+                </Button>
+            </Collapse>
             <div className={styles.main_contactus_wrapper}>
                 <div className={styles.map_section_heading}>We're here</div>
                 <div className={styles.map_section_subheading}>Our door is always open for a cup of tea and conversation</div>
 
                 <div className={styles.col_flex_wrapper}>
 
-                    <div style={{ /* marginRight: "auto", */margin: "auto", width: "500px",textTransform:"none" }}><Accordion expanded={true} onChange={() => { exPand(!expanded) }}>
-                        <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
-                            aria-controls="panel1a-content"
-                            id="panel1a-header"
-                        >
-                            <div className={styles.info_section_heading}>Getting in touch is easy!</div>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <div>
-                                <TextField style={{ width: "300px" }} onChange={handleNameChange} fullwidth id="standard-basic" label="Full Name" />
+                    <div className={styles.col_flex_wrapper_inner}>
+
+                        <div className={styles.info_section_heading}>Getting in touch is easy!</div>
+
+                        <div style={{marginBottom:"10px"}}>
+                            <TextField style={{ width: "300px" }} onChange={handleNameChange} fullwidth id="standard-basic" label="Full Name" />
+                        </div>
+
+                        <div>
+                            <TextField style={{ width: "300px" }} onChange={handleEmail} fullwidth id="standard-basic" label="Contact Number / Email" />
+                        </div>
+
+                        <div className="flexy_boi col">
+                            <div className={styles.form_label}>
+                                {`Are you a Buyer or Seller?`}
                             </div>
-                        </AccordionDetails>
-                        <AccordionDetails>
-                            <div>
-                                <TextField style={{ width: "300px" }} onChange={handleEmail} fullwidth id="standard-basic" label="Contact Number / Email" />
-                            </div>
-                        </AccordionDetails>
-                        <AccordionDetails>
-                            <div className="flexy_boi col">
-                                <div className={styles.form_label}>
-                                    {`Are you a Buyer or Seller?`}
-                                </div>
-                                <div style={{justifyContent:"space-around"}} className="flexy_boi">
+                            <div style={{ justifyContent: "center" }} className="flexy_boi">
                                 <FormControlLabel
                                     checked={selectedValue === 'buyer'}
                                     onChange={handleRadioChange}
@@ -136,39 +178,51 @@ export default function Contact(props) {
                                     name="radio-button-demo"
                                     inputProps={{ 'aria-label': 'Seller' }}
                                 />
-                                </div>
                             </div>
-                        </AccordionDetails>
-                        <AccordionDetails>
-                            <div className="flexy_boi col">
-                                <div className={styles.form_label}>
-                                    {`Which products are you interested in?`}
-                                </div>
-                                {checkBoxOptions.map((e, i) => {
-                                    return (
-                                        <FormControlLabel
-                                            control={
-                                                <Checkbox
-                                                    checked={ischecked(e)}
-                                                    onClick={handleCheckBox}
-                                                    value={e}
-                                                    color="primary"
-                                                />
-                                            }
-                                            label={e}
-                                        />
-                                    )
-                                })}
-                            </div>
-                        </AccordionDetails>
+                        </div>
+
+                        <div className={styles.form_content_wrapper}>
+
+                            <Accordion style={{ boxShadow: "none" }} expanded={expanded} onChange={() => { exPand(!expanded) }}>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <div className={styles.form_label + " " +styles.form_label_interest}>
+                                        {`Which products are you interested in?`}
+                                    </div>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <div className={styles.form_options_list_wrapper}>
+                                    {checkBoxOptions.map((e, i) => {
+                                        return (
+                                            <FormControlLabel
+                                                control={
+                                                    <Checkbox
+                                                        checked={ischecked(e)}
+                                                        onClick={handleCheckBox}
+                                                        value={e}
+                                                        color="primary"
+                                                    />
+                                                }
+                                                label={e}
+                                            />
+                                        )
+                                    })}
+                                    </div>
+                                </AccordionDetails>
+
+                            </Accordion>
+                        </div>
+
                         <Button
                             style={{ marginBottom: "30px" }}
                             variant="contained"
-                            onClick={() => { handleSubmit(); exPand(false) }}
+                            onClick={() => { handleSubmit();}}
                         >
                             Submit
                         </Button>
-                    </Accordion>
                     </div>
 
 
@@ -202,7 +256,7 @@ export default function Contact(props) {
                         </div>
                         <div className={styles.map_section}>
                             {/* <SimpleMap/> */}
-                            <iframe allowFullScreen="true" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.5022301860713!2d72.82839851489919!3d18.95341458715845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf5cbadc4d69%3A0x861d1967b93e067e!2sJainam%20Jewellers!5e0!3m2!1sen!2sin!4v1621784029012!5m2!1sen!2sin"></iframe>
+                            <iframe allowFullScreen={true} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.5022301860713!2d72.82839851489919!3d18.95341458715845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf5cbadc4d69%3A0x861d1967b93e067e!2sJainam%20Jewellers!5e0!3m2!1sen!2sin!4v1621784029012!5m2!1sen!2sin"></iframe>
 
                         </div>
                     </div>
@@ -292,3 +346,15 @@ const checkBoxOptions = [
     "Gold Coins (24 Karat)",
     "Evaluating or Selling ornaments"
 ]
+
+/* const checkBoxOptions = [
+    "Mangalsutra",
+    "Solid Nawabi Chains",
+    "Hollow Nawabi Chains",
+    "Hand-made Chains",
+    "Rudraksh Chains",
+    "Tulshi Chains",
+    "Bracelets",
+    "Gold Coins",
+    "Evaluating or Selling ornaments"
+] */

@@ -4,7 +4,7 @@ import Home from './homepage/desktop'
 import HomeMobile from './homepage/mobile'
 import isMobile from '../middleware/isMobile'
 
-export default function Index({isMobile}) {
+export default function Index({ isMobile }) {
   return (<>
 
     {
@@ -23,9 +23,9 @@ export default function Index({isMobile}) {
   </>)
 }
 
-export async function getServerSideProps({req}){
-  return{
-    props:{
+export async function getServerSideProps({ req }) {
+  return {
+    props: {
       isMobile: isMobile(req),
     },
   }

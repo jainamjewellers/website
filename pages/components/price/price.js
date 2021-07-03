@@ -70,7 +70,7 @@ export default function PriceWidget() {
 	return (
 		<div>
 			{<div style={{ marginTop: "10px", display: "flex", flexDirection: "column" }} className={styles.main_wrapper_outer}>
-				<h2>{`Gold Bar 99.9% purity`}</h2>
+				<h2>{`24 Karat Gold Bar (99.9%)`}</h2>
 				<div className={styles.main_wrapper_inner}>
 					<div className={styles.price_content_box}>
 						<div className={`${styles.current_price_value} ${styles[color]}`}>{`₹ ${(base).toLocaleString()}`}</div>
@@ -81,7 +81,7 @@ export default function PriceWidget() {
 			}
 			{
 				<div style={{ marginTop: "10px", display: "flex", flexDirection: "column" }} className={styles.main_wrapper_outer}>
-					<h2>{`Gold Coin 99.9% purity`}</h2>
+					<h2>{`24 Karat Gold Coin (99.9%)`}</h2>
 					<div className={styles.main_wrapper_inner}>
 						{
 							priceObj &&

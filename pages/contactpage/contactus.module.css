@@ -11,6 +11,27 @@
     width: auto;
     justify-content: center;
     margin: auto;
+    color: #000;
+    text-align: center;
+}
+
+.col_flex_wrapper_inner {
+    /* marginRight: "auto", */
+    margin-top: 0px!important;
+    padding-top: 20px;
+    margin: auto;
+    width: 500px;
+    text-transform: none;
+    border: 1px solid #000;
+}
+
+.info_section_heading {
+    padding-bottom: 20px;
+    font-size: 32px;
+    text-align: center;
+    color: #000;
+    justify-content: center;
+    text-transform: none;
 }
 
 /* .col_flex_wrapper > div{
@@ -41,20 +62,12 @@
     /* filter: invert(100%) */
 }
 
-.info_section_heading {
-    font-size: 32px;
-    text-align: center;
-    color: #000;
-    justify-content: center;
-    text-transform: none;
-}
-
 .map_section_heading {
     font-size: 60px;
     text-align: center;
-    color: rgba(43, 43, 43, 0.852);
+    color: #000;
     font-weight: 900;
-    padding: 12px 0 0 0;
+    padding: 22px 0 0 0;
 }
 
 .form_section_heading {
@@ -66,13 +79,28 @@
 }
 
 .map_section_subheading {
-    font-size: 15px;
+    padding-top: 30px;
+    font-size: 18px;
+    width: 300px;
+    margin: auto;
     color: #000;
     margin-bottom: 60px;
 }
 
 .info_section {
     margin: 0 auto;
+}
+
+.form_content_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 372px;
+    margin: auto;
+    margin: -10px auto 10px;
+}
+
+.MuiAccordionSummary-content{
+    margin: unset!important;
 }
 
 .form_section {
@@ -88,11 +116,25 @@
 .form_section>div>div {
     border: 1px solid black
 }
-.form_label{
-    width: 300px;
-    margin: 20px 0;
+
+.form_label {
+    margin: auto;
+    width: 100%;
+    margin: 50px 0 20px 0;
     font-size: 20px;
+    color: #000;
 }
+
+.form_label_interest{
+    width: 230px;
+}
+.form_options_list_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    flex-direction: column;
+}
+
 .form_section input, .form_section textarea {
     width: 100%;
     background: rgb(33, 33, 33);
