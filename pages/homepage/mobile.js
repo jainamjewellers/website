@@ -5,6 +5,7 @@ export default function Home() {
     useEffect(()=>{
     
     },[])
+    const[prmis,setPrms]=useState({})
     const handleShare = async (link) => {
         let shareData= {
             title: 'JJ',
@@ -16,6 +17,7 @@ export default function Home() {
         /* ref: https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share */
         try{
             const sharePromise = await navigator.share(shareData)
+            setPrms(sharePromise)
             console.log(shareData)
         }catch(err){
             console.log(err)
@@ -25,7 +27,8 @@ export default function Home() {
     
     return (
         <div className={styles.homepage_content_wrapper}>
-           
+           <button onClick={()=>handleShare()}></button>
+           <div>{JSON.stringify(prmis)}</div>
         </div>
     )
 }
