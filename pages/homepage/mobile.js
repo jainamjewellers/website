@@ -15,7 +15,8 @@ export default function Home() {
         /* IMPORTANT: ONLY WORKS IN MOBILE BROWSERS */
         /* ref: https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share */
         try{
-            await navigator.share(shareData)
+            const sharePromise = await navigator.share(shareData)
+            console.log(shareData)
         }catch(err){
             console.log(err)
         }
