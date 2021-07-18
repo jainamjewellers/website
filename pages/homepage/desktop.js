@@ -30,23 +30,15 @@ export default function Home() {
             {/* <div className={styles.slow_gun}>
                 <img style={{maxHeight:"500px"}} src="/img/slowgun.png" />
             </div> */}
-            <div style={{ width: "500px" }}>
+            <div className={styles.tagline_wrapper}>
                 <div className={styles.tagline}>
-                    <div>Purity</div>
-                    <div>is our</div>
+                    <div>Purity is our</div>
                     <div>Purpose</div>
-                    <p>Check out our intricate craftsmanship and our creations</p>
+                    <p>Our mission is to provide ethically sourced, contemporary, affordable and exclusive collections of fine jewelry that are carefully selected to offer an array of classic designs that are made to display the individuality of people who wear them.</p>
+                    <p>We envision setting new dimensions to the jewelry industry in tune with the global market standards of quality, making each of our creations a unique work of art with a cherished story to tell the world.</p>
                 </div>
             </div>
             <PriceWidget></PriceWidget>
-            {/* <div className={styles.body_section}>
-                <div className={`${styles.banner_content} fade-2s`}>
-                    <div className={styles.content_heading}>Finest Jewellery</div>
-                    <div className={`${styles.sub_heading} fade-5s`}>designs that inspire</div>
-                    <div className={`${styles.sub_heading} fade-10s`}>our collection you must admire</div>
-                    <button onClick={()=>handleShare()} className={styles.button1}>View now</button>
-                </div>
-            </div> */}
         </div>
     )
 }

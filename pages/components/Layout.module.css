@@ -15,7 +15,7 @@
 
 .top_elements {
   top: 0;
-  background: #fff;
+  background: #f3f3f3;
   left: 0;
   width: 100%;
   align-items: center;
@@ -26,16 +26,14 @@
   display: flex;
   width: 70%;
   margin: auto;
-  background-color: #fff;
   color: rgb(0, 0, 0);
-  border-bottom: 2px solid #000;
 }
 
 .navbar_link_group {
-  margin-left: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  width: 900px;
+  justify-content: space-around;
 }
 
 .navbar_link {

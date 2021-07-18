@@ -1,5 +1,8 @@
 .homepage_content_wrapper {
   display: flex;
+  width: 900px;
+  justify-content: space-between;
+  margin: 100px auto;
 }
 
 .body_section {
@@ -54,14 +57,25 @@
 .slow_gun{
   animation: come_from_left 30s ease;
 }
-
+.tagline_wrapper{
+  width: fit-content;
+  max-width: 600px ;
+}
 .tagline{
   /* animation: come_from_left 2s ease-in-out; */
   padding-left: 50px;
   text-align: left;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 .tagline div{
   font-size: 50px;
+}
+.tagline p{
+  text-transform: none;
+  font-size: 12pt;
+  line-height: 18pt;
+  font-weight: 300;
 }
 .tagline div:nth-child(1){
   animation: come_from_left 0.4s ease-in-out;

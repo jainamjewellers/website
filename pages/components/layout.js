@@ -21,9 +21,9 @@ export default function Layout(props) {
                 <div className={styles.main_header_wrapper}>
                     <div className={`${styles.top_elements}`}>
                         <nav className={`${styles.navbar} navbar`}>
-                            <a className={""} href="/">
+                            {/* <a className={""} href="/">
                                 <img src="./img/logo_dark.png" className={styles.jainam_logo} alt="..." />
-                            </a>
+                            </a> */}
                             <div className={styles.navbar_link_group}>
                                 <div className={styles.navbar_link}>
                                     <a className={styles.navbar_link_label} href="/">Home</a>
@@ -34,9 +34,6 @@ export default function Layout(props) {
                                 <div className={styles.navbar_link}>
                                     <a className={styles.navbar_link_label} href="/products">Products</a>
                                 </div>
-                                {/* <div className={styles.navbar_link}>
-                                <a className={styles.navbar_link_label} href="/gold_coins">Gold Coins</a>
-                            </div> */}
                                 <div className={styles.navbar_link}>
                                     <a className={styles.navbar_link_label} href="/blog">Blog</a>
                                 </div>

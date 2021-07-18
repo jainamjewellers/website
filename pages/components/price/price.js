@@ -69,17 +69,17 @@ export default function PriceWidget() {
 	}
 	return (
 		<div>
-			{<div style={{ marginTop: "10px", display: "flex", flexDirection: "column" }} className={styles.main_wrapper_outer}>
-				<h2>{`24 Karat Gold Bar (99.9%)`}</h2>
+			{<div className={styles.main_wrapper_outer}>
+				<h2 className={styles.main_heading}>{`24 Karat Gold Bar (99.9%)`}</h2>
 				<div className={styles.main_wrapper_inner}>
 					<div className={styles.price_content_box}>
 						<div className={`${styles.current_price_value} ${styles[color]}`}>{`₹ ${(base).toLocaleString()}`}</div>
-						<div className={styles.price_label}>{`(per 10 grams)`}</div>
+						<div className={styles.price_label}>{`(per 10g)`}</div>
 					</div>
 				</div>
 			</div>
 			}
-			{
+			{/* {
 				<div style={{ marginTop: "10px", display: "flex", flexDirection: "column" }} className={styles.main_wrapper_outer}>
 					<h2>{`24 Karat Gold Coin (99.9%)`}</h2>
 					<div className={styles.main_wrapper_inner}>
@@ -99,7 +99,7 @@ export default function PriceWidget() {
 						}
 					</div>
 				</div>
-			}
+			} */}
 		</div>
 	)
 }
