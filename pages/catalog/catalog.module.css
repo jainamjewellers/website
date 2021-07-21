@@ -2,6 +2,7 @@
     padding-top: 77px;
     width: 100%;
     margin: auto;
+    max-width: 1000px;
 }
 
 .info_box_Wrapper {
@@ -25,21 +26,21 @@
 }
 
 .square_box_link {
-    height: 290px;
+    height: 230px;
     width: 33.33%;
     justify-content: center;
     text-align: center;
     display: flex;
-    border: 1px solid rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255);
     background-size: cover;
-    background: #c2c2c2!important;
+    background: #e3e3e3!important;
     color: white;
     padding: 40px;
     /* transition: background-color 0.4s ease-in-out; */
 }
 
 .border_div {
-    background: #c2c2c2!important;
+    background: #e3e3e3!important;
     /* transition: background-color 0.4s ease-in-out; */
 }
 
@@ -74,7 +75,7 @@
 }
 
 .square_box_link > div> div {
-    background: #c2c2c2!important;
+    background: #e3e3e3!important;
     /* transition: background-color 0.4s ease-in-out; */
 }
 
