@@ -20,17 +20,17 @@
   padding-top: 20px;
   margin-left: auto;
   margin-right: 15px;
-  width: 500px;
+  width: 400px;
   text-transform: none;
   background: #f3f3f3;
   height: fit-content;
 }
 .name_form_input,
 .email_form_input {
-  width: 400px;
-  height: 40px;
+  width: 300px;
+  height: 35px;
   border: none;
-  font-size: 14pt;
+  font-size: 12pt;
   line-height: 14pt;
   padding-left: 20px;
   font-weight: 400;
@@ -38,7 +38,7 @@
 .name_form_input::placeholder,
 .email_form_input::placeholder {
   font-weight: 300;
-  font-size: 14pt;
+  font-size: 12pt;
   line-height: 14pt;
 }
 
@@ -112,9 +112,17 @@
 .form_content_wrapper {
   display: flex;
   flex-direction: column;
-  width: 372px;
+  width: 322px;
   margin: auto;
   margin: -10px auto 10px;
+}
+.checkbox_single_element {
+  text-align: left;
+}
+.checkbox_label {
+  font-size: 12pt;
+  line-height: 12pt;
+  font-weight: 300;
 }
 
 .MuiAccordionSummary-content {
@@ -138,13 +146,14 @@
 .form_label {
   margin: auto;
   width: 100%;
-  margin: 10px 0 10px 0;
+  margin: 10px 0 20px 10px;
   font-size: 20px;
   color: #000;
   text-transform: uppercase;
   text-align: left;
   font-size: 12pt;
   line-height: 12pt;
+  font-weight: 400;
 }
 
 .form_label_interest {
@@ -232,16 +241,16 @@
   border-bottom: none;
 }
 
-.address_rows{
-    padding-bottom: 30px;
+.address_rows {
+  padding-bottom: 30px;
 }
 
 .address_row > div {
   padding: 20px;
 }
 
-.single_contact_detail_middle_row{
-    width: 300px;
+.single_contact_detail_middle_row {
+  width: 300px;
 }
 
 .address_last_row > div {

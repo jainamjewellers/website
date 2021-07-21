@@ -30,6 +30,8 @@ const useStyles = makeStyles((theme) => ({
 const BlackCheckbox = withStyles({
   root: {
     color: "#000",
+    fontSize: "11pt",
+    lineHeight: "11pt",
     "&$checked": {
       color: "#000",
     },
@@ -185,20 +187,17 @@ export default function Contact(props) {
               <div className={styles.form_options_list_wrapper}>
                 {checkBoxOptions.map((e, i) => {
                   return (
-                    <FormControlLabel
-                      key={i}
-                      control={
-                        <BlackCheckbox
-                          icon={<RadioButtonUncheckedIcon />}
-                          checkedIcon={<CheckCircleIcon />}
-                          checked={ischecked(e)}
-                          onClick={handleCheckBox}
-                          value={e}
-                          color="primary"
-                        />
-                      }
-                      label={e}
-                    />
+                    <div className={styles.checkbox_single_element} key={i}>
+                      <BlackCheckbox
+                        icon={<RadioButtonUncheckedIcon />}
+                        checkedIcon={<CheckCircleIcon />}
+                        checked={ischecked(e)}
+                        onClick={handleCheckBox}
+                        value={e}
+                        color="primary"
+                      />
+                      <span className={styles.checkbox_label}>{e}</span>
+                    </div>
                   );
                 })}
               </div>
