@@ -33,14 +33,14 @@
     display: flex;
     border: 3px solid rgb(255, 255, 255);
     background-size: cover;
-    background: #E5E5E5!important;
+    background: #f3f3f3!important;
     color: white;
     padding: 40px;
     /* transition: background-color 0.4s ease-in-out; */
 }
 
 .border_div {
-    background: #E5E5E5!important;
+    background: #f3f3f3!important;
     /* transition: background-color 0.4s ease-in-out; */
 }
 
@@ -75,7 +75,7 @@
 }
 
 .square_box_link > div> div {
-    background: #E5E5E5!important;
+    background: #f3f3f3!important;
     /* transition: background-color 0.4s ease-in-out; */
 }
 

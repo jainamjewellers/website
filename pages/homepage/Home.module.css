@@ -1,10 +1,12 @@
 .homepage_content_wrapper {
+ 
+}
+.tagline_main_wrapper{
   display: flex;
   width: 900px;
   justify-content: space-between;
   margin: 100px auto;
 }
-
 .body_section {
   width: 80%;
   margin: auto;
