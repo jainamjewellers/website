@@ -111,6 +111,7 @@ export default function Contact(props) {
     setOptions([]);
     alert("Your response has been recorded");
     submitForm([fullname, email, selectedValue, options.toString()]);
+    localStorage.removeItem("options")
   };
 
   /* const Accordion = (props) => {
