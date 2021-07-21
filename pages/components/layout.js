@@ -87,6 +87,10 @@ export default function Layout(props) {
             <div style={{marginLeft:"auto"}} className={styles.footer_link_column}>
               <div className={styles.links_header}>STAY IN TOUCH</div>
               <div className={styles.footer_link_element}>Completely free newsletter of promotions and discounts</div>
+              <div className={styles.email_box_small}>
+                  <input placeholder="Your email" type="email"/>
+                  <button>SUBSCRIBE</button>
+              </div>
             </div>
             {/* <div className={styles.socials_wrapper}>
               <div

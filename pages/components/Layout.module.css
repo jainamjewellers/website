@@ -88,6 +88,29 @@
   padding: 40px;
 }
 
+.email_box_small{
+  margin-top: 20px;
+  height: 40px;
+  width: 300px;
+  display: flex;
+  border: 1px solid #000;
+}
+
+.email_box_small input{
+  height: 38px;
+  border: none;
+  padding: 0px 20px;
+}
+
+.email_box_small button{
+  height: 38px;
+  border: none;
+  background: #000;
+  color: #fff;
+  margin-left: auto;
+  padding: 0px 20px;
+}
+
 .socials_wrapper {
   margin-left: auto;
   display: flex;
@@ -133,7 +156,7 @@
   margin: 1rem 0 0 0;
   padding: 1rem 0 1rem 0;
   height: 60px;
-  background: #e3e3e3;
+  background: #E5E5E5;
   font-weight: 300;
   font-size: 10pt;
   line-height: 10pt;
