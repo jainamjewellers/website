@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   height: 100vh;
@@ -15,7 +16,7 @@ a {
 
 * {
   box-sizing: border-box;
-  font-family: Lato,Montserrat;
+  font-family: Lato, Montserrat;
 }
 
 @font-face {
@@ -25,36 +26,34 @@ a {
 
 @font-face {
   font-family: Lato;
-  src: url('../fonts/Lato/Lato-Regular.ttf');
+  src: url("../fonts/Lato/Lato-Regular.ttf");
 }
 
 @font-face {
   font-family: Lato;
   font-weight: 100;
-  src: url('../fonts/Lato/Lato-Light.ttf');
+  src: url("../fonts/Lato/Lato-Light.ttf");
 }
-
 
 @font-face {
   font-family: Avant;
   font-weight: bold;
-  src: url('../fonts/Avant/ITCAvantGardeStdBold.woff');
+  src: url("../fonts/Avant/ITCAvantGardeStdBold.woff");
 }
 
 @font-face {
   font-family: Avant;
   font-weight: 100;
-  src: url('../fonts/Avant/ITCAvantGardeStdXLt.woff');
+  src: url("../fonts/Avant/ITCAvantGardeStdXLt.woff");
 }
 
 @font-face {
   font-family: Avant;
   font-weight: 400;
-  src: url('../fonts/Avant/ITCAvantGardeStdBk.woff');
+  src: url("../fonts/Avant/ITCAvantGardeStdBk.woff");
 }
 
-
-button{
+button {
   cursor: pointer;
 }
 
@@ -62,52 +61,59 @@ button{
   flex-basis: 100%;
   height: 0;
 }
-.black_bg{
+.black_bg {
   position: fixed;
   background: #000;
   z-index: -20;
   width: 100%;
   height: 100%;
 }
-.pull_right{
+.pull_right {
   margin-left: auto;
   padding-left: auto;
-
 }
-.pull_left{
+.pull_left {
   margin-right: auto;
   padding-right: auto;
-
 }
-.flexy_boi{
+.flexy_boi {
   display: flex;
 }
 
-.flexy_boi.col{
+.flexy_boi.col {
   flex-direction: column;
 }
-.contactus_bg img{
+.contactus_bg img {
   /* filter: grayscale(1) brightness(0.15); */
   object-fit: fill;
   width: 100%;
 }
-.scrolled{
-  position: fixed!important;
+.scrolled {
+  position: fixed !important;
   top: 0;
   left: 0;
   margin: auto;
-  background: #fff!important;
+  background: #fff !important;
   z-index: 1000;
   width: fit-content;
+}
+
+input:focus,
+input:focus-visible {
+  border: none;
+  border-color: transparent;
+  outline: none;
+  outline-style: none;
+  box-shadow: none;
 }
 
 /* *{
   transition: all 0.2s ease-in-out
 } */
-.MuiAccordionDetails-root{
+.MuiAccordionDetails-root {
   justify-content: center;
 }
-.MuiAccordionSummary-content{
-  justify-content: center
+.MuiAccordionSummary-content {
+  justify-content: center;
 }
 @import url("./Animation.css");
