@@ -1,84 +1,51 @@
-.colapsable_wrapper {
-    background: #ffbc00;
-    display: flex;
-    transition: all 0.3s ease-in-out;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
+.layout_wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
-.colapsable_wrapper_hide_div div {
-    display: none;
+.heading {
+  display: flex;
+  flex-direction: row;
+  background: #fcfcfc;
+  box-shadow: 0 2.2px 2.9px rgba(0, 0, 0, 0.008),
+    0 4.3px 6.9px rgba(0, 0, 0, 0.018), 0 6.7px 13px rgba(0, 0, 0, 0.034);
 }
 
-.HamButton {
-    position: absolute;
-    height: 2rem;
-    width: 2rem;
-    top: 5vw;
-    right: 5vw;
-    display: flex;
-    flex-direction: column;
-    padding: 0.25rem 0.4rem;
-    background-color: #000;
-    cursor: pointer;
+.logoWrapper,
+.lineButton,
+.searchButton {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+}
+.lineButton {
+  margin-right: auto;
+}
+.searchButton {
+  margin-left: auto;
 }
 
-.expand_ham::after {
-    background: #00000085;
-    z-index: 999999;
-    content: "";
-    height: 100vh;
-    width: 100vh;
-    position: fixed;
-    top: 24rem;
-    transition: all 0.3s ease-in-out;
-    animation: scrollDown 0.3s ease-in-out;
+.jainam_logo {
+  max-height: 50px;
 }
 
-.HamButton div {
-    height: 0.25rem;
-    width: 100%;
-    margin: auto;
-    background-color: #fff;
-    transition: all 0.3s ease-in-out;
-}
-/* #__next > div > div.LayoutMobile_overlaywrapper__3POMo > div:nth-child(2) > div > div:nth-child(1) */
-.top_x{
-    transform: rotate(45deg);
-    position: absolute;
-    top: 0.9rem;
-    left: 0.0rem;
+.hamBorger {
+  height: 1rem;
+  margin-left: 1rem;
 }
 
-.bot_x{
-    transform: rotate(135deg);
-    position: absolute;
-    top: 0.9rem;
-    left: 0.0rem;
-}
-
-.overlaywrapper {
-    height: 24rem;
-    width: 100%;
-    background: #b3b3b3;
-    display: flex;
-    /* position: fixed; 
-    top: 0; */
-}
-
-.navbar_link{
-    font-weight: 600;
-    font-size: 16pt;
-    line-height: 16pt;
-    padding: 1rem;
+.searchIcon {
+  height: 1.2rem;
+  margin-right: 1rem;
 }
 
 @keyframes scrollDown {
-    from {
-        transform: translateY(-24rem);
-    }
-    to {
-        transform: translateY(0px);
-    }
+  from {
+    transform: translateY(-24rem);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }

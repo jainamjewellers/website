@@ -1,3 +1,24 @@
 .homepage_content_wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.taglineBlock{
+    margin-top: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 
+.taglineOne,
+.taglineTwo{
+    font-size: 2rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.taglineContent{
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 300;
 }

@@ -38,9 +38,6 @@ export default function PriceWidget() {
 		console.log("title", array)
 		setPobj(array)
 
-
-
-
 		fetchData()
 		setInterval(fetchData, 1000);
 	}, [])
@@ -61,11 +58,6 @@ export default function PriceWidget() {
 		}
 
 		localStorage.setItem("base", x)
-
-		/* 
-		for(let i=0;i<array.length;i++){
-			
-		} */
 	}
 	return (
 		<div>
@@ -79,27 +71,6 @@ export default function PriceWidget() {
 				</div>
 			</div>
 			}
-			{/* {
-				<div style={{ marginTop: "10px", display: "flex", flexDirection: "column" }} className={styles.main_wrapper_outer}>
-					<h2>{`24 Karat Gold Coin (99.9%)`}</h2>
-					<div className={styles.main_wrapper_inner}>
-						{
-							priceObj &&
-							priceObj.map((element, index) => {
-								if (element.short != "base") {
-									return (
-										<div key={index} className={styles.price_content_box}>
-											<div className={`${styles.current_price_value} ${styles[color]}`}>{`₹ ${(eval(element.formula)).toLocaleString()}`}</div>
-											<div className={styles.price_label}>{`(${element.title})`}</div>
-										</div>
-									)
-								}
-							})
-
-						}
-					</div>
-				</div>
-			} */}
 		</div>
 	)
 }
