@@ -48,7 +48,7 @@ export default function Home() {
         <PriceWidget></PriceWidget>
       </div>
       <div className={styles.homepage_categories_wrapper}>
-        <div className={styles.homepage_categories_heading}>{`Shop by`}</div>
+        <div className={styles.homepage_categories_heading}>{`browse by`}</div>
         <div className={styles.homepage_categories_heading}>{`Categories`}</div>
         <div className={styles.categories_cards}>
           <div className={styles.category_element}>

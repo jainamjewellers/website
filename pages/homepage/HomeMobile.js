@@ -41,7 +41,7 @@ export default function Home() {
         <PriceWidget />
       </div>
       <div className={styles.shopByCategories}>
-        <div className={styles.taglineOne}>{`Shop By`}</div>
+        <div className={styles.taglineOne}>{`browse by`}</div>
         <div className={styles.taglineTwo}>{`Categories`}</div>
         <Carousel
           additionalTransfrom={0}
