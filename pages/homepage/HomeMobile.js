@@ -1,6 +1,8 @@
 import styles from "./HomeMobile.module.css";
 import { useEffect, useState } from "react";
 import PriceWidget from "../components/price/price";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 export default function Home() {
   useEffect(() => {}, []);
@@ -36,8 +38,87 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.priceTicker}>
-        <PriceWidget/>
+        <PriceWidget />
       </div>
+      <div className={styles.shopByCategories}>
+        <div className={styles.taglineOne}>{`Shop By`}</div>
+        <div className={styles.taglineTwo}>{`Categories`}</div>
+        <Carousel
+          additionalTransfrom={0}
+          arrows={false}
+          autoPlay
+          autoPlaySpeed={3000}
+          centerMode={false}
+          className=""
+          containerClass="container-with-dots"
+          dotListClass=""
+          draggable
+          focusOnSelect={false}
+          infinite
+          itemClass=""
+          keyBoardControl
+          minimumTouchDrag={80}
+          renderButtonGroupOutside={false}
+          renderDotsOutside={false}
+          responsive={{
+            superLargeDesktop: {
+              // the naming can be any, depends on you.
+              breakpoint: { max: 4000, min: 3000 },
+              items: 5,
+            },
+            desktop: {
+              breakpoint: { max: 3000, min: 1024 },
+              items: 3,
+            },
+            tablet: {
+              breakpoint: { max: 1024, min: 464 },
+              items: 2,
+            },
+            mobile: {
+              breakpoint: { max: 464, min: 0 },
+              items: 1,
+            },
+          }}
+          customTransition="transform 600ms ease-in-out"
+          showDots={false}
+          sliderClass=""
+          slidesToSlide={1}
+          swipeable
+        >
+          <div className={styles.category_element}>
+            <img src="/img/cardimage1.png" />
+            <div>{`Mangalsutras`}</div>
+          </div>
+          <div className={styles.category_element}>
+            <img src="/img/cardimage2.png" />
+            <div>{`Rudraksh`}</div>
+          </div>
+          <div className={styles.category_element}>
+            <img src="/img/cardimage3.png" />
+            <div>{`Handmade`}</div>
+          </div>
+          <div className={styles.category_element}>
+            <img src="/img/cardimage4.png" />
+            <div>{`Chains`}</div>
+          </div>
+        </Carousel>
+      </div>
+      <div className={styles.handmadeBlock}>
+        <div className={styles.taglineOne}>{`Handmade`}</div>
+        <div className={styles.taglineTwo}>{`Jewellery`}</div>
+      </div>
+      <div className={styles.handmadeContentWrapper}>
+        <div className={styles.handmadeContent}>
+          {`No Mass Production Machinery Involved: By definition, handmade jewelry is literally just that, made by the “hands” of the artisan or maker.`}
+        </div>
+        <div className={styles.handmadeContent}>
+          {`The pieces are soldered, sawed, carved and shaped without the use of mass produced manufacturing machinery.`}
+        </div>
+        <div className={styles.handmadeContent}>
+          {`A machine can crank out hundreds of units per hour while an individual can only make a finite quantity or fraction of the number of pieces in the same amount of time.`}
+        </div>
+      </div>
+      <img className={styles.handmadeImage} src="/img/handmade.png" />
     </div>
   );
 }

@@ -22,3 +22,46 @@
     line-height: 1.5rem;
     font-weight: 300;
 }
+
+.shopByCategories{
+    margin: 3rem 1rem 1rem 1rem;
+}
+
+.category_element{
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.category_element{
+    margin-top: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.handmadeBlock{
+    margin-top: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.handmadeContent{
+    padding-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+}
+
+.handmadeContentWrapper{
+    margin-top: 3rem;
+    padding: 1rem;
+    background: #f9f9f9;
+}
+
+.handmadeImage{
+    width: 100%;
+}
