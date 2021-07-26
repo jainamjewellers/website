@@ -26,6 +26,7 @@
     "react-dom": "17.0.2",
     "react-multi-carousel": "^2.6.2",
     "react-responsive-carousel": "^3.2.20",
+    "react-sidebar": "^3.0.2",
     "react-use-websocket": "^2.7.1",
     "ua-parser-js": "^0.7.28"
   }

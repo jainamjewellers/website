@@ -1,12 +1,46 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import styles from "./LayoutMobile.module.css";
+import Sidebar from "react-sidebar";
 export default function Layout(props) {
   const { children } = props;
-  const [hamburger, setHam] = useState(true);
+  const [hamburger, setHam] = useState(false);
   useEffect(() => {
     /* window.addEventListener('scroll', handleScroll) */
   }, []);
+
+  const SideBarContent = () => {
+    return (
+      <>
+        <div className={styles.sidebarWrapperClass}>
+          <div className={styles.closeButtonWrapper}>
+            <div>
+              <button>
+                <img
+                  onClick={() => {
+                    setHam(false);
+                  }}
+                  src="/img/closeIcon.svg"
+                  alt="Close button"
+                />
+              </button>
+            </div>
+          </div>
+          <div className={styles.logoWrapper_sidebar}>
+            <img src="/img/logo_dark.png" />
+          </div>
+          <div className={styles.sideBar_List}>
+            <a href="/">{`Home`}</a>
+            <a href="/about">{`About`}</a>
+            <a href="/products">{`Products`}</a>
+            <a href="/blog">{`Blog`}</a>
+            <a href="/contact">{`Contact`}</a>
+          </div>
+        </div>
+      </>
+    );
+  };
+
   return (
     <>
       <Head>
@@ -18,33 +52,43 @@ export default function Layout(props) {
           content="Wholesale jewellery store that offers a variety of custom designs made to order."
         ></meta>
       </Head>
-      <div className={styles.layout_wrapper}>
-        <div className={styles.heading}>
-          <div className={styles.lineButton}>
-          <img
-              src="/img/hamBorger.svg"
-              className={styles.hamBorger}
-              alt="Footer Logo"
-            />
+      <Sidebar
+        sidebar={<SideBarContent />}
+        open={hamburger}
+        onSetOpen={setHam}
+        styles={{ sidebar: { background: "white" } }}
+      >
+        <div className={styles.layout_wrapper}>
+          <div className={styles.heading}>
+            <div className={styles.lineButton}>
+              <img
+                onClick={() => {
+                  setHam(true);
+                }}
+                src="/img/hamBorger.svg"
+                className={styles.hamBorger}
+                alt="Footer Logo"
+              />
+            </div>
+            <div className={styles.logoWrapper}>
+              <img
+                src="/img/logo_dark.png"
+                className={styles.jainam_logo}
+                alt="Header Logo"
+              />
+            </div>
+            <div className={styles.searchButton}>
+              <img
+                src="/img/searchIcon.svg"
+                className={styles.searchIcon}
+                alt="Search Logo"
+              />
+            </div>
           </div>
-          <div className={styles.logoWrapper}>
-            <img
-              src="/img/logo_dark.png"
-              className={styles.jainam_logo}
-              alt="Header Logo"
-            />
-          </div>
-          <div className={styles.searchButton}>
-          <img
-              src="/img/searchIcon.svg"
-              className={styles.searchIcon}
-              alt="Search Logo"
-            />
-          </div>
+          <div className={styles.children}>{children}</div>
+          <div className={styles.footer}></div>
         </div>
-        <div className={styles.children}>{children}</div>
-        <div className={styles.footer}></div>
-      </div>
+      </Sidebar>
     </>
   );
 }

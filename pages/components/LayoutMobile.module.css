@@ -40,7 +40,47 @@
   height: 1.2rem;
   margin-right: 1rem;
 }
+.sidebarWrapperClass {
+  max-width: 320px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+.closeButtonWrapper {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+.closeButtonWrapper > div {
+  margin-left: auto;
+}
+.closeButtonWrapper button {
+  border:none;
+  background: none;
+  padding-top: 1rem;
+  padding-right: 1rem;
+}
 
+.closeButtonWrapper img {
+  height: 1.5rem;
+} 
+
+.logoWrapper_sidebar img{
+  max-height: 60px;
+}
+.logoWrapper_sidebar{
+  margin: 0 1rem 2rem 1rem;
+}
+
+.sideBar_List{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  font-size: 1rem;
+  line-height: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
 @keyframes scrollDown {
   from {
     transform: translateY(-24rem);
