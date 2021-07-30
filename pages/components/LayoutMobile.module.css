@@ -31,6 +31,10 @@
   max-height: 50px;
 }
 
+.footer_jainam_logo {
+  max-width: 80%;
+}
+
 .hamBorger {
   height: 1rem;
   margin-left: 1rem;
@@ -55,7 +59,7 @@
   margin-left: auto;
 }
 .closeButtonWrapper button {
-  border:none;
+  border: none;
   background: none;
   padding-top: 1rem;
   padding-right: 1rem;
@@ -63,16 +67,16 @@
 
 .closeButtonWrapper img {
   height: 1.5rem;
-} 
+}
 
-.logoWrapper_sidebar img{
+.logoWrapper_sidebar img {
   max-height: 60px;
 }
-.logoWrapper_sidebar{
+.logoWrapper_sidebar {
   margin: 0 1rem 2rem 1rem;
 }
 
-.sideBar_List{
+.sideBar_List {
   display: flex;
   flex-direction: column;
   margin-left: 1rem;
@@ -81,6 +85,144 @@
   font-weight: 300;
   text-transform: uppercase;
 }
+.footer_link_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #000;
+}
+
+.links_header {
+  font-weight: 500;
+  font-size: 11pt;
+  text-align: left;
+  border-top: solid 1px #fff;
+  margin-bottom: 20px;
+}
+
+.footer_link_element {
+  margin: 0.3rem 2rem 0 0;
+  text-align: left;
+  font-size: 10pt;
+  line-height: 12pt;
+  font-weight: 300;
+}
+
+.email_box_small {
+  margin-top: 20px;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid #000;
+}
+
+.email_box_small input {
+  height: 38px;
+  border: none;
+  overflow: hidden;
+  padding: 0px 20px;
+}
+
+.email_box_small button {
+  height: 38px;
+  width: 100%;
+  border: none;
+  background: #000;
+  color: #fff;
+  margin-left: auto;
+  margin-top: 10px;
+  padding: 0px 20px;
+}
+
+.hide_element {
+  padding-top:5.7rem ;
+}
+.terms_wrapper {
+  margin: 2rem 0 0 0;
+  padding: 1rem 0 1rem 0;
+  height: 60px;
+  background: #f3f3f3;
+  font-weight: 300;
+  font-size: 10pt;
+  line-height: 10pt;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+}
+
+.ig_logo_wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_link_column2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_link_column2 img{
+  max-width: 30vw;
+}
+
+@media (min-width: 480px) {
+  .footer_link_column {
+    width: 33%;
+
+    min-height: 15rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .footer_link_wrapper {
+    padding-top: unset;
+  }
+
+  .footer_link_column {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links_header {
+    margin-top: 2rem;
+    text-align: center;
+    padding: unset;
+    margin-right: unset;
+  }
+
+  .footer_link_element {
+    text-align: center;
+    padding: unset;
+    margin-right: unset;
+  }
+  .email_box_small input {
+    margin: 1px;
+    height: 36px;
+    width: 100%;
+    text-align: center;
+  }
+  .footer_jainam_logo {
+    display: none;
+  }
+  .all_rights {
+    margin-top: 5rem;
+  }
+  .hide_element {
+    display: none;
+  }
+}
+
 @keyframes scrollDown {
   from {
     transform: translateY(-24rem);
