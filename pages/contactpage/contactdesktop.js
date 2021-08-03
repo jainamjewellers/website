@@ -1,20 +1,10 @@
 import styles from "./contactus.module.css";
-import accordion from "./accordion.module.css";
 import { useEffect, useState, useReducer } from "react";
-import SimpleMap from "./map";
-import TextField from "@material-ui/core/TextField";
-import Accordion from "@material-ui/core/Accordion";
-import AccordionSummary from "@material-ui/core/AccordionSummary";
-import AccordionDetails from "@material-ui/core/AccordionDetails";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Radio from "@material-ui/core/Radio";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
-import Button from "@material-ui/core/Button";
 import { submitForm } from "../../actions/append";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
-import Alert from "@material-ui/lab/Alert";
-import IconButton from "@material-ui/core/IconButton";
 import RadioButtonUncheckedIcon from "@material-ui/icons/RadioButtonUnchecked";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 
@@ -130,22 +120,6 @@ export default function Contact(props) {
     submitForm([fullname, emailState.value, selectedValue, options.toString()]);
     localStorage.removeItem("options");
   };
-
-  /* const Accordion = (props) => {
-
-        return (
-            <div className={`${accordion.wrapper} `}>
-                <div onClick={() => open(!isopen)} className={accordion.title}>
-                    {isopen ? <div className={`${accordion.arrow} ${accordion.up}`}>{` `}</div> : <div className={`${accordion.arrow} ${accordion.down}`}>{` `}</div>} <span>{props.title}</span>
-                </div>
-                {
-                    <div className={`${isopen ? accordion.content : accordion.content_hide} add-button-animation`}>
-                        {props.children}
-                    </div>
-                }
-            </div>
-        )
-    } */
   return (
     <div>
       <div className={styles.main_contactus_wrapper}>
@@ -320,69 +294,8 @@ export default function Contact(props) {
         <div className={styles.info_section}>
           <div className={styles.heading}></div>
           <div className="flexy_boi">
-            {/* <div style={{ marginLeft: "auto",paddingRight: "20px",  width:"500px" }}>
-                            <Accordion>
-                                <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
-                                    aria-controls="panel1a-content"
-                                    id="panel1a-header"
-                                >
-                                    <div className={styles.info_section_heading}>Looking for directions?</div>
-                                </AccordionSummary>
-                                <AccordionDetails>
-                                    <div style={{ textAlign: "left" }}>
-                                        <p>
-                                            Refer to directions provided by Google Maps to reach our office’s precise location.
-                                    </p>
-                                        <p>
-                                            We are
-                                    </p>
-                                        <p>
-                                            45-minutes drive away from JKL Airport
-                                    </p>
-                                        <p>
-                                            5-minutes  drive away from ABC bus stop
-                                            5-minutes drive away from ABC bus stop
-                                    </p>
-                                        <p>
-                                            2-minutes walk away from XYZ bus stop
-                                            2-minutes walk away from XYZ bus stop
-                                    </p>
-                                        <p>
-                                            PS. Parking is a challenge in this area. Kindly plan your trip with your personal vehicle accordingly.
-                                    </p>
-                                    </div>
-                                </AccordionDetails>
-                            </Accordion>
-
-                        </div> */}
           </div>
           <div style={{ height: "150px" }}>{` `}</div>
-          {/* 
-                        <div onClick={()=>window.open("https://api.whatsapp.com/send/?phone=917045180822&text")} className={styles.info_section_element}>
-                            <span><img className={styles.link_image} src="/img/whatsapp.svg"/></span>
-                            <span className={styles.link_text}>{`Text on WhatsApp`}</span>
-                        </div>
-                        <div onClick={()=>window.open("https://www.indiamart.com/jainam-jewellers-mumbai")} className={styles.info_section_element}>
-                            <span><img className={`${styles.link_image} ${styles.link_image_svg}`} src="/img/indiamartlogo.png"/></span>
-                            <span className={styles.link_text}>{`Find us on Indiamart`}</span>
-                        </div>
-                        <div onClick={()=>window.open("https://www.facebook.com/jainamjewellersmumbai")} className={styles.info_section_element}>
-                            <span><img className={`${styles.link_image} ${styles.facebook}`} src="/img/facebook.png"/></span>
-                            <span className={styles.link_text}>{`Facebook Page`}</span>
-                        </div>
-                        <div onClick={()=>window.open("https://www.instagram.com/jainamjewellersmumbai")} className={styles.info_section_element}>
-                            <span><img className={`${styles.link_image} ${styles.facebook}`} src="/img/instagram.png"/></span>
-                            <span className={styles.link_text}>{`Like on instagram`}</span>
-                        </div>
-                        <div onClick={()=>window.open("https://www.linkedin.com/company/jainam-jewellers")} className={styles.info_section_element}>
-                            <span><img className={`${styles.link_image} ${styles.facebook}`} src="/img/linkedin.png"/></span>
-                            <span className={styles.link_text}>{`Follow us on LinkedIn`}</span>
-                        </div>
-                        <div onClick={()=>window.open("https://twitter.com/jainamjewelers")} className={styles.info_section_element}>
-                            <span><img className={`${styles.link_image} ${styles.link_image_svg}`} src="/img/twitter.png"/></span>
-                            <span className={styles.link_text}>{`Send a Tweet!`}</span>
-                        </div> */}
         </div>
       </div>
     </div>

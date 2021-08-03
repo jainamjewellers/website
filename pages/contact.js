@@ -1,30 +1,28 @@
-import Layout from './components/layout'
-import Contact from './contactpage/contactdesktop'
-import ContactMobile from './contactpage/contactmobile'
-import isMobile from '../middleware/isMobile'
-export default function Index({isMobile}) {
-    return (
+import Layout from "./components/layout";
+import LayoutMobile from "./components/layout_mobile";
+import Contact from "./contactpage/contactdesktop";
+import ContactMobile from "./contactpage/contactmobile";
+import isMobile from "../middleware/isMobile";
+export default function Index({ isMobile }) {
+  return (
+    <>
+      {isMobile ? (
+        <LayoutMobile>
+          <ContactMobile></ContactMobile>
+        </LayoutMobile>
+      ) : (
         <Layout>
-            {/* <div className="black_bg contactus_bg"><img src="/img/rene-bohmer-YeUVDKZWSZ4-unsplash.jpg"/></div> */}
-
-            {
-                isMobile ?
-                    <ContactMobile>
-
-                    </ContactMobile>
-                    :
-                    <Contact>
-
-                    </Contact>
-            }
+          <Contact></Contact>
         </Layout>
-    )
+      )}
+    </>
+  );
 }
 
 export async function getServerSideProps({ req }) {
-    return {
-        props: {
-            isMobile: isMobile(req),
-        },
-    }
+  return {
+    props: {
+      isMobile: isMobile(req),
+    },
+  };
 }
