@@ -1,30 +1,28 @@
-import Layout from './components/layout'
-import isMobile from '../middleware/isMobile'
-import OurCreation from './catalog/catalog_desktop'
-import OurCreationMobile from './catalog/catalog_mobile'
-export default function Index({isMobile}) {
-    return (
+import Layout from "./components/layout";
+import LayoutMobile from "./components/layout_mobile";
+import isMobile from "../middleware/isMobile";
+import Products from "./catalog/catalog_desktop";
+import ProductsMobile from "./catalog/catalog_mobile";
+export default function Index({ isMobile }) {
+  return (
+    <>
+      {isMobile ? (
+        <LayoutMobile>
+          <ProductsMobile></ProductsMobile>
+        </LayoutMobile>
+      ) : (
         <Layout>
-            {/* <div className="black_bg contactus_bg"><img src="/img/rene-bohmer-YeUVDKZWSZ4-unsplash.jpg"/></div> */}
-
-            {
-                isMobile ?
-                    <OurCreationMobile>
-
-                    </OurCreationMobile>
-                    :
-                    <OurCreation>
-
-                    </OurCreation>
-            }
+          <Products></Products>
         </Layout>
-    )
+      )}
+    </>
+  );
 }
 
 export async function getServerSideProps({ req }) {
-    return {
-        props: {
-            isMobile: isMobile(req),
-        },
-    }
+  return {
+    props: {
+      isMobile: isMobile(req),
+    },
+  };
 }
