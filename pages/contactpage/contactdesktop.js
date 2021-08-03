@@ -1,6 +1,6 @@
 import styles from "./contactus.module.css";
 import accordion from "./accordion.module.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useReducer } from "react";
 import SimpleMap from "./map";
 import TextField from "@material-ui/core/TextField";
 import Accordion from "@material-ui/core/Accordion";
@@ -17,6 +17,16 @@ import Alert from "@material-ui/lab/Alert";
 import IconButton from "@material-ui/core/IconButton";
 import RadioButtonUncheckedIcon from "@material-ui/icons/RadioButtonUnchecked";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+
+const emailReducer = (state, action) => {
+  if(action.type === 'USER_INPUT'){
+    return { value: action.val, isValid: action.val.length > 3 };
+  }
+  if(action.type === 'INPUT_BLUR'){
+    return { value: state.value, isValid: state.value > 3 };
+  }
+  return { value: "", isValid: false };
+};
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -54,16 +64,23 @@ export default function Contact(props) {
 
   const [isopen, open] = useState(false);
   const [expanded, exPand] = useState(false);
-  const [isAlert, setAlert] = useState(false);
 
   const [fullname, setName] = useState("");
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
 
-  const [email, setEmail] = useState("");
+  const [emailState, dispatchEmail] = useReducer(emailReducer, {
+    value:"",
+    isValid: false
+  });
+
   const handleEmail = (e) => {
-    setEmail(e.target.value);
+    dispatchEmail({type:"USER_INPUT",val:e.target.value})
+  };
+
+  const validateEmailHandler = () => {
+    dispatchEmail({type:"INPUT_BLUR"})
   };
 
   const [mob, setMob] = useState("");
@@ -106,12 +123,12 @@ export default function Contact(props) {
   const handleSubmit = () => {
     exPand(false);
     setName("");
-    setEmail("");
+    dispatchEmail({type:"USER_INPUT",val:""})
     selectValue("");
     setOptions([]);
     alert("Your response has been recorded");
-    submitForm([fullname, email, selectedValue, options.toString()]);
-    localStorage.removeItem("options")
+    submitForm([fullname, emailState.value, selectedValue, options.toString()]);
+    localStorage.removeItem("options");
   };
 
   /* const Accordion = (props) => {
@@ -155,7 +172,9 @@ export default function Contact(props) {
             <div>
               <input
                 className={styles.email_form_input}
+                value={emailState.value}
                 onChange={handleEmail}
+                onBlur={validateEmailHandler}
                 placeholder="Phone Number / Email"
               />
             </div>

@@ -1,0 +1,94 @@
+.aboutus_Wrapper {
+  padding-top: 50px;
+  width: 100%;
+  margin: auto;
+}
+
+.info_box_Wrapper {
+  text-align: left;
+  width: 100%;
+  margin: auto;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.aboutus_text_section {
+  max-width: 100%;
+  margin: 20px;
+}
+
+.aboutus_text_section h2 {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 10px 0px;
+  text-transform: uppercase;
+}
+.our_history_Wrapper {
+  width: 100%;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  background: #f3f3f3;
+}
+.our_history_image_Wrapper img {
+  max-height: 400px;
+}
+.our_history_image_Wrapper {
+  height: fit-content;
+  max-height: fit-content;
+}
+
+.our_history_Wrapper h2 {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 0px 0px 30px 0px;
+  text-transform: uppercase;
+}
+.our_history_Wrapper p {
+  font-size: 12pt;
+  line-height: 12pt;
+  font-weight: 300;
+}
+.aboutus_history_section_collapsable {
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.aboutus_history_section {
+  margin: 50px 20px;
+  width: fit-content;
+}
+
+.aboutus_ReadMore {
+  margin-top: 20px;
+  color: #5a5a5a;
+  font-size: 10pt;
+  line-height: 10pt;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.our_team_section h2 {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 0px 0px 30px 20px;
+  text-transform: uppercase;
+  height: 32pt;
+}
+.our_team_main_wrapper {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.our_team_content_wrapper {
+    margin: 0 20px;
+}
+.our_team_content_heading{
+    font-weight: 400;
+    font-size: 24pt;
+    line-height: 24pt;
+}
+.our_team_content_designation{
+    margin-top: 5px;
+    font-size: 12pt;
+    line-height: 12pt;
+}
