@@ -1,0 +1,38 @@
+.outerWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 95vw;
+    margin: auto;
+    justify-content: space-between;
+}
+.innerCardWrapper img{
+    max-width: 95vw;
+    height: auto;
+}
+.innerCardWrapper{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-family: inherit;
+    font-size: 12pt;
+    line-height: 15pt;
+}
+.titleLabelClass{
+    font-family: inherit;
+    font-size: 14pt;
+    line-height: 17pt;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.iconButtons{
+    margin-left: auto;
+}
+.dateLabelClass{
+    font-family: inherit;
+    font-size: 11pt;
+    line-height: 13pt;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
