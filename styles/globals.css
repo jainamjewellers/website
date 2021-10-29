@@ -13,6 +13,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+input[type=checkbox],input[type=radio]{
+  display: none;
+}
 
 * {
   box-sizing: border-box;

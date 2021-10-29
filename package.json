@@ -9,9 +9,10 @@
     "start": "next build && next start -p 8001"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.3",
-    "@material-ui/icons": "^4.11.2",
-    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.0.5",
+    "@mui/material": "^5.0.6",
     "axios": "^0.21.4",
     "google-map-react": "^2.1.10",
     "googleapis": "^78.0.0",
@@ -28,5 +29,8 @@
     "react-sidebar": "^3.0.2",
     "react-use-websocket": "^2.9.1",
     "ua-parser-js": "^0.7.31"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.13.3"
   }
 }

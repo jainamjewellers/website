@@ -1,12 +1,14 @@
 import styles from "./contactus.module.css";
 import { useEffect, useState, useReducer } from "react";
-import Radio from "@material-ui/core/Radio";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+import Checkbox from '@mui/material/Checkbox';
 import { submitForm } from "../../actions/append";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
-import RadioButtonUncheckedIcon from "@material-ui/icons/RadioButtonUnchecked";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const emailReducer = (state, action) => {
   if(action.type === 'USER_INPUT'){
@@ -18,36 +20,6 @@ const emailReducer = (state, action) => {
   return { value: "", isValid: false };
 };
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: "100%",
-    "& > * + *": {
-      marginTop: theme.spacing(2),
-    },
-  },
-}));
-
-const BlackCheckbox = withStyles({
-  root: {
-    color: "#000",
-    fontSize: "11pt",
-    lineHeight: "11pt",
-    "&$checked": {
-      color: "#000",
-    },
-  },
-  checked: {},
-})((props) => <Checkbox color="default" {...props} />);
-
-const BlackRadio = withStyles({
-  root: {
-    color: "#000",
-    "&$checked": {
-      color: "#000",
-    },
-  },
-  checked: {},
-})((props) => <Radio color="default" {...props} />);
 
 export default function Contact(props) {
   useEffect(() => {}, []);
@@ -90,17 +62,17 @@ export default function Contact(props) {
 
   const [options, setOptions] = useState([]);
   const handleCheckBox = async (e) => {
-    console.log(e.target.value);
+    console.log(e);
     //let arr = options
     let arr =
       localStorage.getItem("options") != null
         ? JSON.parse(localStorage.getItem("options"))
         : [];
-    if (arr.includes(e.target.value)) {
-      arr = arr.filter((element) => element != e.target.value);
+    if (arr.includes(e)) {
+      arr = arr.filter((element) => element != e);
       console.log("removed");
     } else {
-      arr.push(e.target.value);
+      arr.push(e);
       console.log("put");
     }
     await setOptions(arr);
@@ -158,20 +130,43 @@ export default function Contact(props) {
                 <FormControlLabel
                   checked={selectedValue === "buyer"}
                   onChange={handleRadioChange}
-                  control={<BlackRadio color="primary" />}
+                  control={
+                  <Radio 
+                    color="default"
+                    sx={{
+                      color: "#000",
+                      fontSize: "11pt",
+                      lineHeight: "11pt",
+                      "&$checked": {
+                        color: "#000",
+                      },
+                      '&.Mui-checked': {
+                        color: '#000',
+                      },
+                    }} />}
                   value="buyer"
                   label="I'm a buyer"
                   name="radio-button-demo"
-                  inputProps={{ "aria-label": "I'm a buyer" }}
                 />
                 <FormControlLabel
                   checked={selectedValue === "seller"}
                   onChange={handleRadioChange}
-                  control={<BlackRadio color="primary" />}
+                  control={<Radio 
+                    color="default"
+                    sx={{
+                      color: "#000",
+                      fontSize: "11pt",
+                      lineHeight: "11pt",
+                      "&$checked": {
+                        color: "#000",
+                      },
+                      '&.Mui-checked': {
+                        color: '#000',
+                      },
+                    }} />}
                   value="seller"
                   label="I'm a seller"
                   name="radio-button-demo"
-                  inputProps={{ "aria-label": "I'm a seller" }}
                 />
               </div>
             </div>
@@ -182,13 +177,18 @@ export default function Contact(props) {
                 {checkBoxOptions.map((e, i) => {
                   return (
                     <div className={styles.checkbox_single_element} key={i}>
-                      <BlackCheckbox
+                      <Checkbox
                         icon={<RadioButtonUncheckedIcon />}
                         checkedIcon={<CheckCircleIcon />}
                         checked={ischecked(e)}
-                        onClick={handleCheckBox}
-                        value={e}
+                        onClick={()=>handleCheckBox(e)}
                         color="primary"
+                        sx={{
+                          color: '#000',
+                          '&.Mui-checked': {
+                            color: '#000',
+                          },
+                        }}
                       />
                       <span className={styles.checkbox_label}>{e}</span>
                     </div>
