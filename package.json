@@ -28,7 +28,8 @@
     "react-responsive-carousel": "^3.2.22",
     "react-sidebar": "^3.0.2",
     "react-use-websocket": "^2.9.1",
-    "ua-parser-js": "^0.7.31"
+    "ua-parser-js": "^0.7.31",
+    "babel-plugin-styled-components": "^1.13.3"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.13.3"
