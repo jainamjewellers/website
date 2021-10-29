@@ -3,9 +3,19 @@ import { useEffect, useState } from "react";
 import PriceWidget from "../components/price/price";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import enContent from "./en-content.json";
+import gjContent from "./gj-content.json";
 
 export default function Home() {
-  useEffect(() => {}, []);
+  useEffect(() => {
+    let lang = localStorage.getItem("lang")
+    if(lang == "gj"){
+      setContent(gjContent);
+    }else{
+      setContent(enContent);
+    }
+  }, []);
+  const [content,setContent] = useState(enContent)
   const [prmis, setPrms] = useState({});
   const handleShare = async (link) => {
     let shareData = {
@@ -28,21 +38,21 @@ export default function Home() {
   return (
     <div className={styles.homepage_content_wrapper}>
       <div className={styles.taglineBlock}>
-        <div className={styles.taglineOne}>{`Purity is our`}</div>
-        <div className={styles.taglineTwo}>{`Purpose`}</div>
+        <div className={styles.taglineOne}>{content.section1.header[0]}</div>
+        <div className={styles.taglineTwo}>{content.section1.header[1]}</div>
         <div className={styles.taglineContent}>
-          {`Our mission is to provide ethically sourced, contemporary, affordable and exclusive collections of fine jewelry that are carefully selected to offer an array of classic designs that are made to display the individuality of people who wear them.`}
+          {content.section1.content[0]}
         </div>
         <div className={styles.taglineContent}>
-          {`We envision setting new dimensions to the jewelry industry in tune with the global market standards of quality, making each of our creations a unique work of art with a cherished story to tell the world.`}
+          {content.section1.content[1]}
         </div>
       </div>
       <div className={styles.priceTicker}>
         <PriceWidget />
       </div>
       <div className={styles.shopByCategories}>
-        <div className={styles.taglineOne}>{`browse by`}</div>
-        <div className={styles.taglineTwo}>{`Categories`}</div>
+        <div className={styles.taglineOne}>{content.section2.header[0]}</div>
+        <div className={styles.taglineTwo}>{content.section2.header[1]}</div>
         <Carousel
           additionalTransfrom={0}
           arrows={false}
@@ -87,35 +97,35 @@ export default function Home() {
         >
           <div className={styles.category_element}>
             <img src="/img/cardimage1.png" />
-            <div>{`Mangalsutras`}</div>
+            <div>{content.section2.content[0]}</div>
           </div>
           <div className={styles.category_element}>
             <img src="/img/cardimage2.png" />
-            <div>{`Rudraksh`}</div>
+            <div>{content.section2.content[1]}</div>
           </div>
           <div className={styles.category_element}>
             <img src="/img/cardimage3.png" />
-            <div>{`Handmade`}</div>
+            <div>{content.section2.content[2]}</div>
           </div>
           <div className={styles.category_element}>
             <img src="/img/cardimage4.png" />
-            <div>{`Chains`}</div>
+            <div>{content.section2.content[3]}</div>
           </div>
         </Carousel>
       </div>
       <div className={styles.handmadeBlock}>
-        <div className={styles.taglineOne}>{`Handmade`}</div>
-        <div className={styles.taglineTwo}>{`Jewellery`}</div>
+        <div className={styles.taglineOne}>{content.section3.header[0]}</div>
+        <div className={styles.taglineTwo}>{content.section3.header[1]}</div>
       </div>
       <div className={styles.handmadeContentWrapper}>
         <div className={styles.handmadeContent}>
-          {`No Mass Production Machinery Involved: By definition, handmade jewelry is literally just that, made by the “hands” of the artisan or maker.`}
+          {content.section3.content[0]}
         </div>
         <div className={styles.handmadeContent}>
-          {`The pieces are soldered, sawed, carved and shaped without the use of mass produced manufacturing machinery.`}
+          {content.section3.content[1]}
         </div>
         <div className={styles.handmadeContent}>
-          {`A machine can crank out hundreds of units per hour while an individual can only make a finite quantity or fraction of the number of pieces in the same amount of time.`}
+          {content.section3.content[2]}
         </div>
       </div>
       <img className={styles.handmadeImage} src="/img/handmade.png" />

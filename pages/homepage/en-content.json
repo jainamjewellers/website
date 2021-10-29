@@ -1,0 +1,21 @@
+{
+  "section1": {
+    "header": ["Purity is our", "Purpose"],
+    "content": [
+      "Our mission is to provide ethically sourced, contemporary, affordable and exclusive collections of fine jewelry that are carefully selected to offer an array of classic designs that are made to display the individuality of people who wear them.",
+      "We envision setting new dimensions to the jewelry industry in tune with the global market standards of quality, making each of our creations a unique work of art with a cherished story to tell the world."
+    ]
+  },
+  "section2": {
+    "header": ["browse by", "Categories"],
+    "content": ["Mangalsutras", "Rudraksh", "Handmade", "Chains"]
+  },
+  "section3": {
+    "header": ["Handmade", "Jewellery"],
+    "content": [
+      "No Mass Production Machinery Involved: By definition, handmade jewelry is literally just that, made by the “hands” of the artisan or maker",
+      "The pieces are soldered, sawed, carved and shaped without the use of mass produced manufacturing machinery.",
+      "A machine can crank out hundreds of units per hour while an individual can only make a finite quantity or fraction of the number of pieces in the same amount of time."
+    ]
+  }
+}

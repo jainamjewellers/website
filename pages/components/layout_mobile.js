@@ -7,8 +7,24 @@ export default function Layout(props) {
   const [hamburger, setHam] = useState(false);
   useEffect(() => {
     /* window.addEventListener('scroll', handleScroll) */
+    if (localStorage.getItem("lang")) {
+      setLang(localStorage.getItem("lang"));
+    } else {
+      localStorage.setItem("lang", "gj");
+    }
   }, []);
-
+  const [lang, setLang] = useState("gj");
+  const handlelangChange = (e) => {
+    if (e == "gj") {
+      setLang("en");
+      localStorage.setItem("lang", "en");
+    }
+    if (e == "en") {
+      setLang("gj");
+      localStorage.setItem("lang", "gj");
+    }
+    window.location.reload()
+  };
   const SideBarContent = () => {
     return (
       <>
@@ -29,12 +45,27 @@ export default function Layout(props) {
           <div className={styles.logoWrapper_sidebar}>
             <img src="/img/logo_dark.png" />
           </div>
-          <div className={styles.sideBar_List}>
-            <a href="/">{`Home`}</a>
-            <a href="/about">{`About`}</a>
-            <a href="/products">{`Products`}</a>
-            <a href="/blog">{`Blog`}</a>
-            <a href="/contact">{`Contact`}</a>
+          <div className={lang=="gj"?`${styles.sideBar_List_gj}`:`${styles.sideBar_List}`}>
+            <a href="/">
+              {lang == "en" && "Home"}
+              {lang == "gj" && "ઘર"}
+            </a>
+            <a href="/about">
+              {lang == "en" && "About"}
+              {lang == "gj" && "વિશે"}
+            </a>
+            <a href="/products">
+              {lang == "en" && "Products"}
+              {lang == "gj" && "ઉત્પાદનો"}
+            </a>
+            <a href="/blog">
+              {lang == "en" && "Blog"}
+              {lang == "gj" && "બ્લોગ"}
+            </a>
+            <a href="/contact">
+              {lang == "en" && "Contact"}
+              {lang == "gj" && "સંપર્ક કરો"}
+            </a>
           </div>
         </div>
       </>
@@ -78,11 +109,15 @@ export default function Layout(props) {
               />
             </div>
             <div className={styles.searchButton}>
-              <img
+              {/* <img
                 src="/img/searchIcon.svg"
                 className={styles.searchIcon}
                 alt="Search Logo"
-              />
+              /> */}
+              <div style={{fontSize : (lang=="gj")?"1rem":"2rem",marginTop:(lang=="gj")?"":"-2rem"}} className={styles.searchIcon} onClick={() => handlelangChange(lang)}>
+                {lang == "en" && "ગુજ"}
+                {lang == "gj" && "EN"}
+              </div>
             </div>
           </div>
           <div className={styles.children}>{children}</div>
@@ -119,7 +154,9 @@ export default function Layout(props) {
                     alt="Footer Logo"
                   />
                 </a>
-                <div className={`${styles.footer_link_element} ${styles.all_rights}`}>
+                <div
+                  className={`${styles.footer_link_element} ${styles.all_rights}`}
+                >
                   © 2021 Jainam Jewellers. All rights reserved.
                 </div>
               </div>

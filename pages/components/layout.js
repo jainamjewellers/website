@@ -5,9 +5,25 @@ export default function Layout(props) {
   const { children } = props;
 
   const [hamburger, setHam] = useState(true);
-
+  const [lang,setLang]=useState("gj")
+  const handlelangChange = (e)=>{
+    if (e=="gj"){
+      setLang("en")
+      localStorage.setItem("lang","en")
+    }
+    if (e=="en"){
+      setLang("gj")
+      localStorage.setItem("lang","gj")
+    }
+    window.location.reload()
+  }
   useEffect(() => {
     /* window.addEventListener('scroll', handleScroll) */
+    if(localStorage.getItem("lang")){
+      setLang(localStorage.getItem("lang"))
+    }else{
+      localStorage.setItem("lang","gj")
+    }
   }, []);
   return (
     <>
@@ -29,29 +45,40 @@ export default function Layout(props) {
                             </a> */}
               <div className={styles.navbar_link_group}>
                 <div className={styles.navbar_link}>
-                  <a className={styles.navbar_link_label} href="/">
-                    Home
+                  <a  style={{fontSize : (lang=="gj")?"20px":"12px"}} className={styles.navbar_link_label} href="/">
+                    {(lang=="en") && "Home"}
+                    {(lang=="gj") && "ઘર"}
                   </a>
                 </div>
                 <div className={styles.navbar_link}>
-                  <a className={styles.navbar_link_label} href="/about">
-                    About
+                  <a  style={{fontSize : (lang=="gj")?"20px":"12px"}} className={styles.navbar_link_label} href="/about">
+                    {(lang=="en") && "About"}
+                    {(lang=="gj") && "વિશે"}
                   </a>
                 </div>
                 <div className={styles.navbar_link}>
-                  <a className={styles.navbar_link_label} href="/products">
-                    Products
+                  <a  style={{fontSize : (lang=="gj")?"20px":"12px"}} className={styles.navbar_link_label} href="/products">
+                    {(lang=="en") && "Products"}
+                    {(lang=="gj") && "ઉત્પાદનો"}
                   </a>
                 </div>
                 <div className={styles.navbar_link}>
-                  <a className={styles.navbar_link_label} href="/blog">
-                    Blog
+                  <a  style={{fontSize : (lang=="gj")?"20px":"12px"}} className={styles.navbar_link_label} href="/blog">
+                    {(lang=="en") && "Blog"}
+                    {(lang=="gj") && "બ્લોગ"}
                   </a>
                 </div>
                 <div className={styles.navbar_link}>
-                  <a className={styles.navbar_link_label} href="/contact">
-                    Contact
+                  <a  style={{fontSize : (lang=="gj")?"20px":"12px"}} className={styles.navbar_link_label} href="/contact">
+                    {(lang=="en") && "Contact"}
+                    {(lang=="gj") && "સંપર્ક કરો"}
                   </a>
+                </div>
+                <div className={styles.navbar_link}>
+                  <div onClick={()=>{handlelangChange(lang)}} style={{fontSize : (lang=="en")?"20px":"12px"}} className={styles.navbar_link_label}>
+                    {(lang=="en") && "ગુજરાતી"}
+                    {(lang=="gj") && "English"}
+                  </div>
                 </div>
               </div>
             </nav>

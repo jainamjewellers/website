@@ -85,6 +85,15 @@
   font-weight: 300;
   text-transform: uppercase;
 }
+.sideBar_List_gj{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
 .footer_link_wrapper {
   display: flex;
   flex-wrap: wrap;

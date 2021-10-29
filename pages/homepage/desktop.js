@@ -4,8 +4,18 @@ import { useEffect, useState } from "react";
 import PriceWidget from "../components/price/price";
 import Carousel from "../components/carousel/desktop";
 import HomeCarousel from "./HomeCarousel";
+import enContent from "./en-content.json";
+import gjContent from "./gj-content.json";
 export default function Home() {
-  useEffect(() => {}, []);
+  useEffect(() => {
+    let lang = localStorage.getItem("lang")
+    if(lang == "gj"){
+      setContent(gjContent);
+    }else{
+      setContent(enContent);
+    }
+  }, []);
+  const [content,setContent] = useState(enContent)
   const handleShare = async (link) => {
     let shareData = {
       title: "JJ",
@@ -29,65 +39,48 @@ export default function Home() {
       <div className={styles.tagline_main_wrapper}>
         <div className={styles.tagline_wrapper}>
           <div className={styles.tagline}>
-            <div>Purity is our</div>
-            <div>Purpose</div>
-            <p>
-              Our mission is to provide ethically sourced, contemporary,
-              affordable and exclusive collections of fine jewelry that are
-              carefully selected to offer an array of classic designs that are
-              made to display the individuality of people who wear them.
-            </p>
-            <p>
-              We envision setting new dimensions to the jewelry industry in tune
-              with the global market standards of quality, making each of our
-              creations a unique work of art with a cherished story to tell the
-              world.
-            </p>
+            <div>{content.section1.header[0]}</div>
+            <div>{content.section1.header[1]}</div>
+            <p>{content.section1.content[0]}</p>
+            <p>{content.section1.content[1]}</p>
           </div>
         </div>
         <PriceWidget></PriceWidget>
       </div>
       <div className={styles.homepage_categories_wrapper}>
-        <div className={styles.homepage_categories_heading}>{`browse by`}</div>
-        <div className={styles.homepage_categories_heading}>{`Categories`}</div>
+        <div className={styles.homepage_categories_heading}>
+          {content.section2.header[0]}
+        </div>
+        <div className={styles.homepage_categories_heading}>
+          {content.section2.header[1]}
+        </div>
         <div className={styles.categories_cards}>
           <div className={styles.category_element}>
             <img src="/img/cardimage1.png" />
-            <div>{`Mangalsutras`}</div>
+            <div>{content.section2.content[0]}</div>
           </div>
           <div className={styles.category_element}>
             <img src="/img/cardimage2.png" />
-            <div>{`Rudraksh`}</div>
+            <div>{content.section2.content[1]}</div>
           </div>
           <div className={styles.category_element}>
             <img src="/img/cardimage3.png" />
-            <div>{`Handmade`}</div>
+            <div>{content.section2.content[2]}</div>
           </div>
           <div className={styles.category_element}>
             <img src="/img/cardimage4.png" />
-            <div>{`Chains`}</div>
+            <div>{content.section2.content[3]}</div>
           </div>
         </div>
       </div>
       <div className={styles.homepage_handmade_wrapper}>
-        <div className={styles.homepage_handmade_heading}>{`Handmade`}</div>
-        <div className={styles.homepage_handmade_heading}>{`Jewellery`}</div>
+        <div className={styles.homepage_handmade_heading}>{content.section3.header[0]}</div>
+        <div className={styles.homepage_handmade_heading}>{content.section3.header[1]}</div>
         <div className={styles.homepage_handmade_group}>
           <div className={styles.homepage_handmade_content_wrap}>
-            <div>
-              {`No Mass Production Machinery Involved: By definition, handmade
-              jewelry is literally just that, made by the “hands” of the artisan
-              or maker.`}
-            </div>
-            <div>
-              {`The pieces are soldered, sawed, carved and shaped without the use
-              of mass produced manufacturing machinery.`}
-            </div>
-            <div>
-              {`A machine can crank out hundreds of units per hour while an
-              individual can only make a finite quantity or fraction of the
-              number of pieces in the same amount of time.`}
-            </div>
+            <div>{content.section3.content[0]}</div>
+            <div>{content.section3.content[1]}</div>
+            <div>{content.section3.content[2]}</div>
           </div>
           <div className={styles.image_wrapper_handmade}>
             <img src="/img/handmade.png" />
